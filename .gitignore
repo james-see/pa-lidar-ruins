@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.pyc
+data/raw/
+data/dem/
+data/cache/
+*.tif
+*.tiff
+*.laz
+*.las
+*.zip
+results/*.tif
+results/chips/
+.DS_Store
+logs/
+# Never commit candidate-site locations, chips or per-site search outputs (reported privately to PA SHPO)
+results/private/
+data/private/

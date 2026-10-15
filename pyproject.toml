@@ -1,0 +1,47 @@
+[project]
+name = "pa-lidar-ruins"
+version = "0.1.0"
+description = "Lidar archaeology in Pennsylvania: detectors for prehistoric mounds, relict charcoal hearths and military earthworks on USGS 3DEP 1 m bare-earth DEMs, calibrated on known public sites."
+readme = "README.md"
+license = "MIT"
+requires-python = ">=3.12"
+dependencies = [
+    "geopandas>=1.2.0",
+    "matplotlib>=3.11.2",
+    "numpy>=2.5.4",
+    "pandas>=3.0.6",
+    "pyproj>=3.8.0",
+    "rasterio>=1.5.2",
+    "requests>=2.34.2",
+    "scikit-image>=0.26.0",
+    "scipy>=1.18.1",
+    "shapely>=2.2.0",
+]
+
+[build-system]
+requires = ["uv_build>=0.11,<0.12"]
+build-backend = "uv_build"
+
+[tool.uv.build-backend]
+module-name = "palidar"
+
+[tool.ruff]
+line-length = 110
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP", "NPY"]
+ignore = ["E741"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+    "ruff>=0.17.1",
+]
+
+[tool.ruff.lint.per-file-ignores]
+"scripts/03_chips.py" = ["E402"]  # matplotlib.use("Agg") must precede pyplot import
+"scripts/*" = ["B905"]
