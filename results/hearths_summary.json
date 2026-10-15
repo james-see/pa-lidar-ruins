@@ -1,0 +1,8 @@
+{
+  "sgl43_reference_hearths": 908,
+  "sgl43_test_reference": 516,
+  "sgl43_candidates": 286658,
+  "candidate_recall_test": 0.9728682170542635,
+  "train_pos": 381,
+  "train_neg": 139715
+}

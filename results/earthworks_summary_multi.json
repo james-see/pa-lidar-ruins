@@ -1,0 +1,38 @@
+{
+  "military_dev_median_pct_all_above": 0.06965277777777777,
+  "enclosure_dev_median_pct_all_above": 0.17399305555555555,
+  "military_test_median_pct_all_above": 0.12409722222222222,
+  "enclosure_test_median_pct_all_above": 0.12055555555555555,
+  "military_all": {
+    "n": 25,
+    "median_pct_all_above": 0.095,
+    "in_top1pct": 3,
+    "in_top5pct": 8,
+    "in_top10pct": 13
+  },
+  "military_clear": {
+    "n": 12,
+    "median_pct_all_above": 0.07368055555555555,
+    "in_top1pct": 3,
+    "in_top5pct": 5,
+    "in_top10pct": 8
+  },
+  "enclosure_all": {
+    "n": 15,
+    "median_pct_all_above": 0.1622222222222222,
+    "in_top1pct": 2,
+    "in_top5pct": 3,
+    "in_top10pct": 5
+  },
+  "enclosure_clear": {
+    "n": 3,
+    "median_pct_all_above": 0.1622222222222222,
+    "in_top1pct": 0,
+    "in_top5pct": 0,
+    "in_top10pct": 1
+  },
+  "n_negative_tiles": {
+    "bg": 8640,
+    "aml": 5760
+  }
+}

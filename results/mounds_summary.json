@@ -1,0 +1,10 @@
+{
+  "n_known": 47,
+  "n_detected_any": 34,
+  "recall_any_candidate": 0.723404255319149,
+  "median_rank_in_window": 3.5,
+  "top1_in_window": 13,
+  "top5_in_window": 21,
+  "median_window_candidates": 238.0,
+  "recall_any_candidate_clear_domes": 0.96
+}

@@ -1,0 +1,9 @@
+{
+  "method": "Blind visual audit (scripts/07_audit_chips.py, threshold p>=0.9, SGL 43 test half). 30 random detections NOT matched to the reference were shuffled with 10 matched detections (positive controls) into an unlabeled 80 m chip grid; each chip was judged hearth / maybe / not-hearth before unblinding.",
+  "matched_controls": {"n": 10, "hearth": 7, "maybe": 3, "not": 0},
+  "unmatched": {"n": 30, "hearth": 5, "maybe": 2, "not": 23},
+  "unmatched_not_hearth_types": "road and trail junctions/turnouts, road cuts, stream banks and channel bends, ditches, field edges",
+  "measured_precision_at_0.9": 0.367,
+  "audit_adjusted_precision_at_0.9_range": [0.47, 0.51],
+  "note": "Adjusted = measured + (1 - measured) * (unmatched judged hearth [5/30] .. hearth+maybe [7/30]). Single-rater, n=30: indicative only."
+}

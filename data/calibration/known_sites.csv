@@ -1,88 +1,88 @@
-site_id,cls,name,lat,lon,state,source,notes
-M01,mound,Grave Creek Mound,39.91684,-80.74466,WV,OSM node + Wikipedia en:Grave Creek Mound,Adena; ~19 m high
-M02,mound,Criel Mound,38.36891,-81.69676,WV,OSM way + Wikipedia en:Criel Mound,Adena; in town park
-M03,mound,Shawnee Reservation Mound,38.37846,-81.7605,WV,OSM way (tumulus),
-M04,mound,Camden Park Mound,38.39776,-82.53155,WV,OSM node (tumulus),in amusement park
-M05,mound,Miamisburg Mound,39.6276,-84.28088,OH,OSM node Miamisburg Mound State Memorial,Adena; ~20 m high
-M06,mound,Conus Mound,39.42034,-81.45153,OH,OSM way (Mound Cemetery Marietta),
-M07,mound,Capitolium Mound,39.42416,-81.45784,OH,OSM way (Marietta Earthworks),platform mound under library
-M08,mound,Quadranaou Mound,39.42526,-81.46106,OH,OSM way (Marietta Earthworks),platform mound
-M09,mound,Seip Central Mound,39.23789,-83.2201,OH,OSM way (Hopewell Culture NHP),reconstructed
-M10,mound,Harkness Mound,39.25601,-82.87681,OH,OSM node (Liberty Earthworks),
-M11,mound,Tremper Mound,38.80143,-83.0102,OH,OSM relation + Wikipedia,
-M12,mound,Edgington Mound,38.80272,-84.19169,OH,OSM way,
-M13,mound,Elk Lick Mound,39.01191,-84.1337,OH,OSM way,
-M14,mound,Shannon Mound,38.53813,-83.90267,KY,OSM way,
-M15,mound,Horseshoe Mound,38.74305,-82.97773,OH,OSM way,
-M16,mound,Piketon Mounds,39.05124,-83.01925,OH,OSM node,Mound Cemetery Piketon
-M17,mound,Circle Mound,39.10181,-83.40692,OH,OSM node,
-M18,mound,Odd Fellows Cemetery Mound,39.12729,-84.35569,OH,OSM way,
-M19,mound,Indian Mound Preserve,39.20942,-84.78628,OH,OSM way,
-M20,mound,Belpre Mounds,39.27594,-81.5978,OH,OSM way,
-M21,mound,Landen Mounds I and II,39.32255,-84.27416,OH,OSM node,
-M22,mound,Romney Indian Mound,39.34241,-78.76585,WV,OSM node,
-M23,mound,Hopewell Mound Group Big Mound 25,39.35949,-83.09517,OH,OSM way (Hopewell Culture NHP),largely excavated/plowed
-M24,mound,Hopewell Mound Group Mound 23,39.36019,-83.0903,OH,OSM way,
-M25,mound,Line Hill Mound,39.41765,-84.49235,OH,OSM node,
-M26,mound,Reynolds Mound,39.41881,-81.18496,OH,OSM way,
-M27,mound,Cross Mound,39.56239,-82.78515,OH,OSM way + Wikipedia,
-M28,mound,Shawnee Indian Mound,39.65006,-84.24244,OH,OSM node,
-M29,mound,Kinsey Road Mound,39.71007,-83.91294,OH,OSM way,
-M30,mound,Native American Burial Mound (Greene Co.),39.80369,-83.88262,OH,OSM node (tumulus),
-M31,mound,Rutledge Mound,39.98383,-82.35096,OH,OSM way,
-M32,mound,Tippett Mound,39.9875,-82.35468,OH,OSM way,
-M33,mound,Shrum Mound,39.99,-83.08059,OH,OSM node,Campbell Park Columbus
-M34,mound,Adena Indian Mound (Columbus),40.01827,-82.85404,OH,OSM node,
-M35,mound,Infirmary Mound,40.02321,-82.51445,OH,OSM way,
-M36,mound,Eagle Mound (Great Circle),40.04101,-82.43108,OH,OSM way (Newark Earthworks),inside Great Circle
-M37,mound,Fort Jackson Mound,40.04867,-82.94548,OH,OSM way,
-M38,mound,Owens Mound,40.07601,-82.44501,OH,OSM node,
-M39,mound,Jeffers Mound,40.0925,-83.0394,OH,OSM way + Wikipedia,
-M40,mound,Adena Mound (Delaware Co.),40.15617,-83.02297,OH,OSM node,
-M41,mound,Porter's Mound,40.23211,-81.86693,OH,OSM node,
-M42,mound,Adena Mound (Mount Horeb),38.15875,-84.46468,KY,OSM node + Wikipedia en:Mount Horeb Earthworks Complex,
-M43,mound,Twin Mounds (Fort Ancient),39.40833,-84.08565,OH,OSM relation,
-M44,mound,Serpent Mound conical mound A,39.02402,-83.43072,OH,OSM node (tumulus),
-M45,mound,Serpent Mound conical mound B,39.02424,-83.42847,OH,OSM node (tumulus),
-M46,mound,Ashland Central Park mound 1,38.47461,-82.6397,KY,OSM node (tumulus),
-M47,mound,Ashland Central Park mound 2,38.47479,-82.64016,KY,OSM node (tumulus),
-E01,enclosure,Newark Great Circle,40.04102,-82.43114,OH,OSM way + Wikipedia en:Newark Earthworks,
-E02,enclosure,Newark Octagon,40.0547,-82.44426,OH,OSM way,golf course
-E03,enclosure,Newark Observatory Circle,40.05209,-82.44861,OH,OSM way,
-E04,enclosure,Wright Square (Newark),40.04835,-82.42334,OH,OSM way,small surviving wall
-E05,enclosure,Fort Ancient,39.40539,-84.09355,OH,OSM relation + Wikipedia,hilltop walls
-E06,enclosure,Fort Hill,39.11559,-83.39723,OH,OSM relation + Wikipedia,hilltop walls in forest
-E07,enclosure,Seip Circle,39.23862,-83.21925,OH,OSM way,plowed down
-E08,enclosure,Liberty Earthworks Big Circle,39.25332,-82.87624,OH,OSM way,plowed down
-E09,enclosure,High Bank Circle,39.29979,-82.91956,OH,OSM way,plowed down
-E10,enclosure,Hopeton Earthworks,39.38379,-82.97826,OH,OSM way,plowed down
-E11,enclosure,Mound City Group,39.37653,-83.00433,OH,OSM way + Wikipedia,reconstructed
-E12,enclosure,Stubbs Earthworks,39.35732,-84.16028,OH,OSM node + Wikipedia,largely destroyed
-E13,enclosure,Mariemont Embankment,39.14082,-84.37738,OH,OSM way,
-E14,enclosure,Serpent Mound effigy,39.02582,-83.43066,OH,OSM relation + Wikipedia,effigy
-E15,enclosure,Alligator Effigy Mound,40.07,-82.50106,OH,OSM node + Wikipedia,effigy
-F01,military,Fort Foote,38.76777,-77.02898,MD,OSM way + Wikipedia en:Fort Foote,Civil War
-F02,military,Fort Ward NW Bastion,38.83081,-77.10252,VA,OSM node,Civil War; partly restored
-F03,military,Fort Marcy,38.93507,-77.12595,VA,OSM way + Wikipedia,Civil War
-F04,military,Fort DeRussy,38.96331,-77.05096,DC,OSM way + Wikipedia,Civil War
-F05,military,Fort Stevens,38.96436,-77.02919,DC,OSM way + Wikipedia,Civil War; partly reconstructed
-F06,military,Fort Totten,38.947056,-77.004139,DC,Wikipedia en:Fort Totten (Washington D.C.),Civil War
-F07,military,Battery Bailey,38.95252,-77.11004,MD,OSM way,Civil War
-F08,military,Fort Davis,38.86941,-76.94402,DC,OSM relation (park),Civil War
-F09,military,Cannon Branch Redoubt,38.73585,-77.5166,VA,OSM node + Wikipedia,Civil War
-F10,military,Mayfield Fortification,38.75363,-77.4529,VA,OSM way + Wikipedia,Civil War
-F11,military,A Fort and Battery Hill Redoubt,38.78946,-77.42778,VA,OSM node + Wikipedia,Civil War (Centreville)
-F12,military,Civil War Artillery Emplacement (Centreville),38.79422,-77.43624,VA,OSM way,Civil War
-F13,military,Civil War Trench (Montgomery Co. MD),39.00791,-77.31356,MD,OSM way,Civil War
-F14,military,Bulltown Confederate Entrenchments,38.78664,-80.56717,WV,OSM node,Civil War
-F15,military,Bulltown Union Entrenchments,38.78943,-80.56371,WV,OSM node,Civil War
-F16,military,Fort Johnston (Leesburg),39.12914,-77.58436,VA,OSM node + Wikipedia,Civil War
-F17,military,Fort Mulligan,39.00101,-79.13963,WV,OSM node,Civil War
-F18,military,Fort Edward Johnson,38.31324,-79.38266,VA,OSM node,Civil War
-F19,military,Camp Bartow,38.53764,-79.77346,WV,OSM node,Civil War
-F20,military,Fort Mill Ridge,39.32444,-78.79361,WV,OSM node + Wikipedia,Civil War trenches
-F21,military,Fort Meigs,41.55269,-83.65085,OH,OSM way + Wikipedia,War of 1812; reconstructed earthworks
-F22,military,Fort Miamis,41.57232,-83.62582,OH,OSM node + Wikipedia,1794 British earthwork
-F23,military,Fort Necessity,39.81521,-79.58941,PA,OSM way + Wikipedia,1754; reconstructed
-F24,military,Culp's Hill (Gettysburg),39.8201,-77.2203,PA,Wikipedia en:Culp's Hill,1863 breastworks remnants
-F25,military,Doubleday Hill,39.59882,-77.82544,MD,OSM way,Civil War emplacement
+site_id,cls,name,lat,lon,state,source,notes,visual_audit
+M01,mound,Grave Creek Mound,39.91684,-80.74466,WV,OSM node + Wikipedia en:Grave Creek Mound,Adena; ~19 m high,clear_dome
+M02,mound,Criel Mound,38.36891,-81.69676,WV,OSM way + Wikipedia en:Criel Mound,Adena; in town park,clear_dome
+M03,mound,Shawnee Reservation Mound,38.37846,-81.7605,WV,OSM way (tumulus),,clear_dome
+M04,mound,Camden Park Mound,38.39776,-82.53155,WV,OSM node (tumulus),in amusement park,clear_dome
+M05,mound,Miamisburg Mound,39.6276,-84.28088,OH,OSM node Miamisburg Mound State Memorial,Adena; ~20 m high,clear_dome
+M06,mound,Conus Mound,39.42034,-81.45153,OH,OSM way (Mound Cemetery Marietta),,clear_dome
+M07,mound,Capitolium Mound,39.42416,-81.45784,OH,OSM way (Marietta Earthworks),platform mound under library,platform
+M08,mound,Quadranaou Mound,39.42526,-81.46106,OH,OSM way (Marietta Earthworks),platform mound,platform
+M09,mound,Seip Central Mound,39.23789,-83.2201,OH,OSM way (Hopewell Culture NHP),reconstructed,elongated
+M10,mound,Harkness Mound,39.25601,-82.87681,OH,OSM node (Liberty Earthworks),,not_visible
+M11,mound,Tremper Mound,38.80143,-83.0102,OH,OSM relation + Wikipedia,,faint
+M12,mound,Edgington Mound,38.80272,-84.19169,OH,OSM way,,clear_dome
+M13,mound,Elk Lick Mound,39.01191,-84.1337,OH,OSM way,,clear_dome
+M14,mound,Shannon Mound,38.53813,-83.90267,KY,OSM way,,clear_dome
+M15,mound,Horseshoe Mound,38.74305,-82.97773,OH,OSM way,,ring_or_u
+M16,mound,Piketon Mounds,39.05124,-83.01925,OH,OSM node,Mound Cemetery Piketon,clear_dome
+M17,mound,Circle Mound,39.10181,-83.40692,OH,OSM node,,ring_or_u
+M18,mound,Odd Fellows Cemetery Mound,39.12729,-84.35569,OH,OSM way,,clear_dome
+M19,mound,Indian Mound Preserve,39.20942,-84.78628,OH,OSM way,,clear_dome
+M20,mound,Belpre Mounds,39.27594,-81.5978,OH,OSM way,,faint
+M21,mound,Landen Mounds I and II,39.32255,-84.27416,OH,OSM node,,not_visible
+M22,mound,Romney Indian Mound,39.34241,-78.76585,WV,OSM node,,clear_dome
+M23,mound,Hopewell Mound Group Big Mound 25,39.35949,-83.09517,OH,OSM way (Hopewell Culture NHP),largely excavated/plowed,faint
+M24,mound,Hopewell Mound Group Mound 23,39.36019,-83.0903,OH,OSM way,,not_visible
+M25,mound,Line Hill Mound,39.41765,-84.49235,OH,OSM node,,ring_or_u
+M26,mound,Reynolds Mound,39.41881,-81.18496,OH,OSM way,,clear_dome
+M27,mound,Cross Mound,39.56239,-82.78515,OH,OSM way + Wikipedia,,not_visible
+M28,mound,Shawnee Indian Mound,39.65006,-84.24244,OH,OSM node,,faint
+M29,mound,Kinsey Road Mound,39.71007,-83.91294,OH,OSM way,,clear_dome
+M30,mound,Native American Burial Mound (Greene Co.),39.80369,-83.88262,OH,OSM node (tumulus),,faint
+M31,mound,Rutledge Mound,39.98383,-82.35096,OH,OSM way,,clear_dome
+M32,mound,Tippett Mound,39.9875,-82.35468,OH,OSM way,,clear_dome
+M33,mound,Shrum Mound,39.99,-83.08059,OH,OSM node,Campbell Park Columbus,clear_dome
+M34,mound,Adena Indian Mound (Columbus),40.01827,-82.85404,OH,OSM node,,not_visible
+M35,mound,Infirmary Mound,40.02321,-82.51445,OH,OSM way,,faint
+M36,mound,Eagle Mound (Great Circle),40.04101,-82.43108,OH,OSM way (Newark Earthworks),inside Great Circle,clear_dome
+M37,mound,Fort Jackson Mound,40.04867,-82.94548,OH,OSM way,,faint
+M38,mound,Owens Mound,40.07601,-82.44501,OH,OSM node,,clear_dome
+M39,mound,Jeffers Mound,40.0925,-83.0394,OH,OSM way + Wikipedia,,clear_dome
+M40,mound,Adena Mound (Delaware Co.),40.15617,-83.02297,OH,OSM node,,clear_dome
+M41,mound,Porter's Mound,40.23211,-81.86693,OH,OSM node,,clear_dome
+M42,mound,Adena Mound (Mount Horeb),38.15875,-84.46468,KY,OSM node + Wikipedia en:Mount Horeb Earthworks Complex,,ring_or_u
+M43,mound,Twin Mounds (Fort Ancient),39.40833,-84.08565,OH,OSM relation,,not_visible
+M44,mound,Serpent Mound conical mound A,39.02402,-83.43072,OH,OSM node (tumulus),,not_visible
+M45,mound,Serpent Mound conical mound B,39.02424,-83.42847,OH,OSM node (tumulus),,not_visible
+M46,mound,Ashland Central Park mound 1,38.47461,-82.6397,KY,OSM node (tumulus),,clear_dome
+M47,mound,Ashland Central Park mound 2,38.47479,-82.64016,KY,OSM node (tumulus),,clear_dome
+E01,enclosure,Newark Great Circle,40.04102,-82.43114,OH,OSM way + Wikipedia en:Newark Earthworks,,clear
+E02,enclosure,Newark Octagon,40.0547,-82.44426,OH,OSM way,golf course,faint
+E03,enclosure,Newark Observatory Circle,40.05209,-82.44861,OH,OSM way,,clear
+E04,enclosure,Wright Square (Newark),40.04835,-82.42334,OH,OSM way,small surviving wall,faint
+E05,enclosure,Fort Ancient,39.40539,-84.09355,OH,OSM relation + Wikipedia,hilltop walls,faint
+E06,enclosure,Fort Hill,39.11559,-83.39723,OH,OSM relation + Wikipedia,hilltop walls in forest,faint
+E07,enclosure,Seip Circle,39.23862,-83.21925,OH,OSM way,plowed down,not_visible
+E08,enclosure,Liberty Earthworks Big Circle,39.25332,-82.87624,OH,OSM way,plowed down,not_visible
+E09,enclosure,High Bank Circle,39.29979,-82.91956,OH,OSM way,plowed down,faint
+E10,enclosure,Hopeton Earthworks,39.38379,-82.97826,OH,OSM way,plowed down,faint
+E11,enclosure,Mound City Group,39.37653,-83.00433,OH,OSM way + Wikipedia,reconstructed,clear
+E12,enclosure,Stubbs Earthworks,39.35732,-84.16028,OH,OSM node + Wikipedia,largely destroyed,not_visible
+E13,enclosure,Mariemont Embankment,39.14082,-84.37738,OH,OSM way,,faint
+E14,enclosure,Serpent Mound effigy,39.02582,-83.43066,OH,OSM relation + Wikipedia,effigy,faint
+E15,enclosure,Alligator Effigy Mound,40.07,-82.50106,OH,OSM node + Wikipedia,effigy,faint
+F01,military,Fort Foote,38.76777,-77.02898,MD,OSM way + Wikipedia en:Fort Foote,Civil War,clear
+F02,military,Fort Ward NW Bastion,38.83081,-77.10252,VA,OSM node,Civil War; partly restored,clear
+F03,military,Fort Marcy,38.93507,-77.12595,VA,OSM way + Wikipedia,Civil War,clear
+F04,military,Fort DeRussy,38.96331,-77.05096,DC,OSM way + Wikipedia,Civil War,clear
+F05,military,Fort Stevens,38.96436,-77.02919,DC,OSM way + Wikipedia,Civil War; partly reconstructed,faint
+F06,military,Fort Totten,38.947056,-77.004139,DC,Wikipedia en:Fort Totten (Washington D.C.),Civil War,clear
+F07,military,Battery Bailey,38.95252,-77.11004,MD,OSM way,Civil War,faint
+F08,military,Fort Davis,38.86941,-76.94402,DC,OSM relation (park),Civil War,faint
+F09,military,Cannon Branch Redoubt,38.73585,-77.5166,VA,OSM node + Wikipedia,Civil War,clear
+F10,military,Mayfield Fortification,38.75363,-77.4529,VA,OSM way + Wikipedia,Civil War,clear
+F11,military,A Fort and Battery Hill Redoubt,38.78946,-77.42778,VA,OSM node + Wikipedia,Civil War (Centreville),not_visible
+F12,military,Civil War Artillery Emplacement (Centreville),38.79422,-77.43624,VA,OSM way,Civil War,clear
+F13,military,Civil War Trench (Montgomery Co. MD),39.00791,-77.31356,MD,OSM way,Civil War,faint
+F14,military,Bulltown Confederate Entrenchments,38.78664,-80.56717,WV,OSM node,Civil War,faint
+F15,military,Bulltown Union Entrenchments,38.78943,-80.56371,WV,OSM node,Civil War,faint
+F16,military,Fort Johnston (Leesburg),39.12914,-77.58436,VA,OSM node + Wikipedia,Civil War,clear
+F17,military,Fort Mulligan,39.00101,-79.13963,WV,OSM node,Civil War,clear
+F18,military,Fort Edward Johnson,38.31324,-79.38266,VA,OSM node,Civil War,faint
+F19,military,Camp Bartow,38.53764,-79.77346,WV,OSM node,Civil War,faint
+F20,military,Fort Mill Ridge,39.32444,-78.79361,WV,OSM node + Wikipedia,Civil War trenches,clear
+F21,military,Fort Meigs,41.55269,-83.65085,OH,OSM way + Wikipedia,War of 1812; reconstructed earthworks,clear
+F22,military,Fort Miamis,41.57232,-83.62582,OH,OSM node + Wikipedia,1794 British earthwork,faint
+F23,military,Fort Necessity,39.81521,-79.58941,PA,OSM way + Wikipedia,1754; reconstructed,not_visible
+F24,military,Culp's Hill (Gettysburg),39.8201,-77.2203,PA,Wikipedia en:Culp's Hill,1863 breastworks remnants,faint
+F25,military,Doubleday Hill,39.59882,-77.82544,MD,OSM way,Civil War emplacement,faint

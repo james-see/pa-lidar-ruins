@@ -1,0 +1,200 @@
+win,kind,cls,has_1m,usgs_1m_products
+site_M01,site,mound,True,USGS 1 Meter 17 x52y442 OH_Statewide_Phase2_2020_B20 | USGS 1 Meter 17 x52y442 WV_FEMAR3_Southcentral_2018_D19
+site_M02,site,mound,True,USGS 1 Meter 17 x43y425 WV_FEMAR3_Southcentral_2018_D19
+site_M03,site,mound,True,USGS 1 Meter 17 x43y425 WV_FEMAR3_Southcentral_2018_D19
+site_M04,site,mound,True,USGS 1 Meter 17 x36y426 KY_Eastern_2019_A19 | USGS 1 Meter 17 x36y426 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 17 x36y426 VA_FEMA-NRCS_SouthCentral_2017_D17 | USGS 1 Meter 17 x36y426 WV_FEMAR3_Southcentral_2018_D19
+site_M05,site,mound,True,USGS 1 Meter 16 x73y439 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 16 x73y440 OH_Statewide_Phase3_2021_B21
+site_M06,site,mound,True,USGS 1 Meter 17 x46y437 OH_Statewide_Phase2_2020_B20 | USGS 1 Meter 17 x46y437 WV_FEMAR3_Southcentral_2018_D19
+site_M07,site,mound,True,USGS 1 Meter 17 x46y437 OH_Statewide_Phase2_2020_B20 | USGS 1 Meter 17 x46y437 WV_FEMAR3_Southcentral_2018_D19
+site_M08,site,mound,True,USGS 1 Meter 17 x46y437 OH_Statewide_Phase2_2020_B20 | USGS 1 Meter 17 x46y437 WV_FEMAR3_Southcentral_2018_D19
+site_M09,site,mound,True,USGS 1 Meter 17 x30y435 OH_Statewide_Phase3_2021_B21
+site_M10,site,mound,True,USGS 1 Meter 17 x33y435 OH_Statewide_Phase3_2021_B21
+site_M11,site,mound,True,USGS 1 Meter 17 x32y430 KY_Eastern_2019_A19 | USGS 1 Meter 17 x32y430 OH_Statewide_Phase3_2021_B21
+site_M12,site,mound,True,USGS 1 Meter 16 x74y430 KY_Eastern_2019_A19 | USGS 1 Meter 16 x74y430 OH_Statewide_Phase3_2021_B21
+site_M13,site,mound,True,USGS 1 Meter 16 x74y433 OH_Statewide_Phase3_2021_B21
+site_M14,site,mound,True,USGS 1 Meter 16 x76y427 KY_Eastern_2019_A19 | USGS 1 Meter 16 x76y427 KY_WestCentral_2017_C19 | USGS 1 Meter 16 x76y428 KY_Eastern_2019_A19 | USGS 1 Meter 16 x76y428 KY_WestCentral_2017_C19 | USGS 1 Meter 17 x24y427 KY_Eastern_2019_A19 | USGS 1 Meter 17 x24y427 KY_WestCentral_2017_C19
+site_M15,site,mound,True,USGS 1 Meter 17 x32y429 KY_Eastern_2019_A19 | USGS 1 Meter 17 x32y429 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 17 x32y430 KY_Eastern_2019_A19 | USGS 1 Meter 17 x32y430 OH_Statewide_Phase3_2021_B21
+site_M16,site,mound,True,USGS 1 Meter 17 x32y433 OH_Statewide_Phase3_2021_B21
+site_M17,site,mound,True,USGS 1 Meter 17 x29y434 OH_Statewide_Phase3_2021_B21
+site_M18,site,mound,True,USGS 1 Meter 16 x72y434 KY_WesternKY_A22 | USGS 1 Meter 16 x72y434 OH_Statewide_Phase3_2021_B21
+site_M19,site,mound,True,USGS 1 Meter 16 x69y435 OH_Statewide_Phase3_2021_B21
+site_M20,site,mound,True,USGS 1 Meter 17 x44y435 OH_Statewide_Phase2_2020_B20 | USGS 1 Meter 17 x44y435 WV_FEMAR3_Southcentral_2018_D19
+site_M21,site,mound,True,USGS 1 Meter 16 x73y436 OH_Statewide_Phase3_2021_B21
+site_M22,site,mound,True,USGS one meter x69y436 VA FEMA R3 Northeast 2016
+site_M23,site,mound,True,USGS 1 Meter 17 x31y436 OH_Statewide_Phase3_2021_B21
+site_M24,site,mound,True,USGS 1 Meter 17 x31y436 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 17 x32y436 OH_Statewide_Phase3_2021_B21
+site_M25,site,mound,True,USGS 1 Meter 16 x71y437 OH_Statewide_Phase3_2021_B21
+site_M26,site,mound,True,USGS 1 Meter 17 x48y437 OH_Statewide_Phase2_2020_B20 | USGS 1 Meter 17 x48y437 WV_FEMAR3_Southcentral_2018_D19
+site_M27,site,mound,True,USGS 1 Meter 17 x34y439 OH_Statewide_Phase2_2020_B20 | USGS 1 Meter 17 x34y439 OH_Statewide_Phase3_2021_B21
+site_M28,site,mound,True,USGS 1 Meter 16 x73y440 OH_Statewide_Phase3_2021_B21
+site_M29,site,mound,True,USGS 1 Meter 16 x76y440 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 16 x76y441 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 17 x24y440 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 17 x25y440 OH_Statewide_Phase3_2021_B21
+site_M30,site,mound,True,USGS 1 Meter 16 x76y442 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 17 x25y441 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 17 x25y442 OH_Statewide_Phase3_2021_B21
+site_M31,site,mound,True,USGS 1 Meter 17 x38y443 OH_Statewide_Phase2_2020_B20
+site_M32,site,mound,True,USGS 1 Meter 17 x38y443 OH_Statewide_Phase2_2020_B20
+site_M33,site,mound,True,USGS 1 Meter 17 x32y443 OH_Statewide_Phase3_2021_B21 | USGS one meter x32y443 OH Columbus 2019
+site_M34,site,mound,True,USGS 1 Meter 17 x34y444 OH_Statewide_Phase2_2020_B20 | USGS 1 Meter 17 x34y444 OH_Statewide_Phase3_2021_B21 | USGS one meter x34y444 OH Columbus 2019
+site_M35,site,mound,True,USGS 1 Meter 17 x37y444 OH_Statewide_Phase2_2020_B20
+site_M36,site,mound,True,USGS 1 Meter 17 x37y444 OH_Statewide_Phase2_2020_B20
+site_M37,site,mound,True,USGS 1 Meter 17 x33y444 OH_Statewide_Phase3_2021_B21 | USGS one meter x33y444 OH Columbus 2019
+site_M38,site,mound,True,USGS 1 Meter 17 x37y444 OH_Statewide_Phase2_2020_B20
+site_M39,site,mound,True,USGS 1 Meter 17 x32y444 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 17 x32y445 OH_Statewide_Phase3_2021_B21 | USGS one meter x32y444 OH Columbus 2019 | USGS one meter x32y445 OH Columbus 2019 | USGS one meter x32y445 OH Delaware 2018
+site_M40,site,mound,True,USGS 1 Meter 17 x32y445 OH_Statewide_Phase3_2021_B21 | USGS one meter x32y445 OH Columbus 2019 | USGS one meter x32y445 OH Delaware 2018
+site_M41,site,mound,True,USGS 1 Meter 17 x42y446 OH_Statewide_Phase2_2020_B20
+site_M42,site,mound,True,USGS 1 Meter 16 x72y423 KY_Eastern_2019_A19 | USGS 1 Meter 16 x72y423 KY_WesternKY_A22
+site_M43,site,mound,True,USGS 1 Meter 16 x75y437 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 17 x23y437 OH_Statewide_Phase3_2021_B21 | USGS one meter x75y437 OH Clinton 2018
+site_M44,site,mound,True,USGS 1 Meter 17 x28y433 OH_Statewide_Phase3_2021_B21
+site_M45,site,mound,True,USGS 1 Meter 17 x28y433 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 17 x29y433 OH_Statewide_Phase3_2021_B21
+site_M46,site,mound,True,USGS 1 Meter 17 x35y426 KY_Eastern_2019_A19 | USGS 1 Meter 17 x35y426 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 17 x35y427 KY_Eastern_2019_A19 | USGS 1 Meter 17 x35y427 OH_Statewide_Phase3_2021_B21
+site_M47,site,mound,True,USGS 1 Meter 17 x35y426 KY_Eastern_2019_A19 | USGS 1 Meter 17 x35y426 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 17 x35y427 KY_Eastern_2019_A19 | USGS 1 Meter 17 x35y427 OH_Statewide_Phase3_2021_B21
+site_E01,site,enclosure,True,USGS 1 Meter 17 x37y444 OH_Statewide_Phase2_2020_B20
+site_E02,site,enclosure,True,USGS 1 Meter 17 x37y444 OH_Statewide_Phase2_2020_B20
+site_E03,site,enclosure,True,USGS 1 Meter 17 x37y444 OH_Statewide_Phase2_2020_B20
+site_E04,site,enclosure,True,USGS 1 Meter 17 x37y444 OH_Statewide_Phase2_2020_B20
+site_E05,site,enclosure,True,USGS 1 Meter 16 x75y437 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 17 x23y437 OH_Statewide_Phase3_2021_B21 | USGS one meter x75y437 OH Clinton 2018
+site_E06,site,enclosure,True,USGS 1 Meter 17 x29y434 OH_Statewide_Phase3_2021_B21
+site_E07,site,enclosure,True,USGS 1 Meter 17 x30y435 OH_Statewide_Phase3_2021_B21
+site_E08,site,enclosure,True,USGS 1 Meter 17 x33y435 OH_Statewide_Phase3_2021_B21
+site_E09,site,enclosure,True,USGS 1 Meter 17 x33y436 OH_Statewide_Phase3_2021_B21
+site_E10,site,enclosure,True,USGS 1 Meter 17 x32y437 OH_Statewide_Phase3_2021_B21
+site_E11,site,enclosure,True,USGS 1 Meter 17 x32y437 OH_Statewide_Phase3_2021_B21
+site_E12,site,enclosure,True,USGS 1 Meter 16 x74y436 OH_Statewide_Phase3_2021_B21 | USGS 1 Meter 16 x74y437 OH_Statewide_Phase3_2021_B21
+site_E13,site,enclosure,True,USGS 1 Meter 16 x72y434 KY_WesternKY_A22 | USGS 1 Meter 16 x72y434 OH_Statewide_Phase3_2021_B21
+site_E14,site,enclosure,True,USGS 1 Meter 17 x28y433 OH_Statewide_Phase3_2021_B21
+site_E15,site,enclosure,True,USGS 1 Meter 17 x37y444 OH_Statewide_Phase2_2020_B20
+site_F01,site,military,True,USGS 1 Meter 18 x32y430 MD_Central_Processing_D24 | USGS 1 Meter 18 x32y430 VA_NorthernVA_B22 | USGS one meter x32y430 MD VA Sandy NCR 2014 | USGS one meter x32y430 VA Fairfax County 2018
+site_F02,site,military,True,USGS 1 Meter 18 x31y430 VA_NorthernVA_B22 | USGS 1 Meter 18 x31y431 VA_NorthernVA_B22 | USGS one meter x31y430 VA Fairfax County 2018 | USGS one meter x31y431 MD VA Sandy NCR 2014 | USGS one meter x31y431 VA Fairfax County 2018
+site_F03,site,military,True,USGS 1 Meter 18 x31y432 MD_Central_Processing_D24 | USGS 1 Meter 18 x31y432 VA_NorthernVA_B22 | USGS one meter x31y432 MD VA Sandy NCR 2014 | USGS one meter x31y432 VA Fairfax County 2018
+site_F04,site,military,True,USGS 1 Meter 18 x32y432 MD_Central_Processing_D24 | USGS one meter x32y432 MD VA Sandy NCR 2014
+site_F05,site,military,True,USGS 1 Meter 18 x32y432 MD_Central_Processing_D24 | USGS one meter x32y432 MD VA Sandy NCR 2014
+site_F06,site,military,True,USGS 1 Meter 18 x32y432 MD_Central_Processing_D24 | USGS one meter x32y432 MD VA Sandy NCR 2014
+site_F07,site,military,True,USGS 1 Meter 18 x31y432 MD_Central_Processing_D24 | USGS 1 Meter 18 x31y432 VA_NorthernVA_B22 | USGS one meter x31y432 MD VA Sandy NCR 2014 | USGS one meter x31y432 VA Fairfax County 2018
+site_F08,site,military,True,USGS 1 Meter 18 x33y431 MD_Central_Processing_D24 | USGS one meter x33y431 MD VA Sandy NCR 2014
+site_F09,site,military,True,USGS 1 Meter 18 x28y430 VA_NorthernVA_B22 | USGS one meter x28y430 MD VA Sandy NCR 2014 | USGS one meter x28y430 VA Fairfax County 2018
+site_F10,site,military,True,USGS 1 Meter 18 x28y430 VA_NorthernVA_B22 | USGS one meter x28y430 MD VA Sandy NCR 2014 | USGS one meter x28y430 VA Fairfax County 2018
+site_F11,site,military,True,USGS 1 Meter 18 x28y430 VA_NorthernVA_B22 | USGS one meter x28y430 MD VA Sandy NCR 2014 | USGS one meter x28y430 VA Fairfax County 2018
+site_F12,site,military,True,USGS 1 Meter 18 x28y430 VA_NorthernVA_B22 | USGS one meter x28y430 MD VA Sandy NCR 2014 | USGS one meter x28y430 VA Fairfax County 2018
+site_F13,site,military,True,USGS 1 Meter 18 x29y433 MD_Central_Processing_D24 | USGS 1 Meter 18 x29y433 VA_NorthernVA_B22 | USGS 1 Meter 18 x30y433 MD_Central_Processing_D24 | USGS 1 Meter 18 x30y433 VA_NorthernVA_B22 | USGS one meter x29y433 VA Fairfax County 2018 | USGS one meter x30y433 VA Fairfax County 2018
+site_F14,site,military,True,USGS 1 Meter 17 x53y430 WV_FEMAR3_Southcentral_2018_D19
+site_F15,site,military,True,USGS 1 Meter 17 x53y430 WV_FEMAR3_Southcentral_2018_D19
+site_F16,site,military,True,USGS 1 Meter 18 x27y434 VA_NorthernVA_B22
+site_F17,site,military,True,USGS one meter x66y432 VA FEMA R3 Northeast 2016
+site_F18,site,military,True,USGS 1 Meter 17 x64y425 VA_NorthernShenandoah_2020_D20 | USGS 1 Meter 17 x64y425 VA_West_Chesapeake_Bay_Watershed_Lidar_2017_B17
+site_F19,site,military,True,USGS 1 Meter 17 x60y427 WV_FEMAHQ_2018_D18 | USGS one meter x60y427 WV FEMA R3 East 2016
+site_F20,site,military,True,USGS one meter x68y436 VA FEMA R3 Northeast 2016 | USGS one meter x69y436 VA FEMA R3 Northeast 2016
+site_F21,site,military,True,USGS one meter x27y461 OH LowerMaumee B16 2016
+site_F22,site,military,True,USGS one meter x28y461 OH LowerMaumee B16 2016
+site_F23,site,military,True,USGS 1 Meter 17 x62y441 PA_WesternPA_2019_D20
+site_F24,site,military,True,USGS one meter x30y442 PA South Central B1 2017 | USGS one meter x31y441 PA South Central B1 2017 | USGS one meter x31y442 PA South Central B1 2017
+site_F25,site,military,True,USGS 1 Meter 18 x25y439 MD_Western_2021_D21
+bg_01,bg,background,True,USGS 1 Meter 18 x41y453 PA_3_County_South_Central_2018_D18 | USGS 1 Meter 18 x41y453 PA_Northcentral_2019_B19
+bg_02,bg,background,True,USGS 1 Meter 18 x45y460 PA_Northcentral_2019_B19
+bg_03,bg,background,True,USGS 1 Meter 18 x40y462 PA_Northcentral_2019_B19 | USGS 1 Meter 18 x41y462 PA_Northcentral_2019_B19
+bg_04,bg,background,True,USGS 1 Meter 17 x60y453 PA_WesternPA_2019_D20
+bg_05,bg,background,True,USGS 1 Meter 18 x35y464 PA_Northcentral_2019_B19
+bg_06,bg,background,True,USGS 1 Meter 17 x76y447 PA_Northcentral_2019_B19 | USGS 1 Meter 18 x25y447 PA_Northcentral_2019_B19
+bg_07,bg,background,True,USGS one meter x30y442 PA South Central B1 2017
+bg_08,bg,background,True,USGS 1 Meter 18 x44y458 PA_Northcentral_2019_B19 | USGS one meter x44y458 PA LuzerneCounty 2018
+bg_09,bg,background,True,USGS 1 Meter 18 x40y450 PA_3_County_South_Central_2018_D18
+bg_10,bg,background,True,USGS 1 Meter 18 x41y446 PA_3_County_South_Central_2018_D18 | USGS 1 Meter 18 x41y446 PA_Northcentral_2019_B19 | USGS one meter x41y446 PA Sandy 2014
+bg_11,bg,background,True,USGS one meter x26y442 PA South Central B1 2017
+bg_12,bg,background,True,USGS 1 Meter 17 x61y460 PA_WesternPA_2019_D20
+bg_13,bg,background,True,USGS 1 Meter 17 x70y451 PA_Northcentral_2019_B19 | USGS 1 Meter 17 x70y451 PA_WesternPA_2019_D20
+bg_14,bg,background,True,USGS 1 Meter 18 x26y446 PA_Northcentral_2019_B19 | USGS one meter x26y446 PA South Central B1 2017
+bg_15,bg,background,True,USGS 1 Meter 17 x60y454 PA_WesternPA_2019_D20
+bg_16,bg,background,True,USGS 1 Meter 17 x65y459 PA_Northcentral_2019_B19 | USGS 1 Meter 17 x65y459 PA_WesternPA_2019_D20
+bg_17,bg,background,True,USGS 1 Meter 17 x75y464 PA_Northcentral_2019_B19 | USGS 1 Meter 18 x25y464 PA_Northcentral_2019_B19
+bg_18,bg,background,True,USGS 1 Meter 18 x37y449 PA_3_County_South_Central_2018_D18 | USGS one meter x37y449 PA South Central B1 2017
+bg_19,bg,background,True,USGS 1 Meter 18 x44y463 PA_Northcentral_2019_B19
+bg_20,bg,background,True,USGS 1 Meter 17 x73y449 PA_Northcentral_2019_B19
+bg_21,bg,background,True,USGS 1 Meter 18 x36y444 PA_Northcentral_2019_B19 | USGS one meter x36y444 PA Sandy 2014
+bg_22,bg,background,True,USGS 1 Meter 17 x64y440 MD_4County_D24 | USGS 1 Meter 17 x64y440 PA_WesternPA_2019_D20 | USGS 1 Meter 17 x64y441 PA_WesternPA_2019_D20 | USGS one meter x64y440 MD Garret Co 2014
+bg_23,bg,background,True,USGS 1 Meter 18 x42y459 PA_3_County_South_Central_2018_D18 | USGS 1 Meter 18 x42y459 PA_Northcentral_2019_B19 | USGS one meter x42y459 PA LuzerneCounty 2018
+bg_24,bg,background,True,USGS 1 Meter 18 x38y462 PA_Northcentral_2019_B19
+bg_25,bg,background,True,USGS 1 Meter 17 x76y457 PA_Northcentral_2019_B19 | USGS 1 Meter 18 x26y457 PA_Northcentral_2019_B19
+bg_26,bg,background,True,USGS 1 Meter 17 x61y443 PA_WesternPA_2019_D20 | USGS 1 Meter 17 x61y444 PA_WesternPA_2019_D20
+bg_27,bg,background,True,USGS one meter x36y454 PA South Central B2 2017
+bg_28,bg,background,True,USGS 1 Meter 18 x31y462 PA_Northcentral_2019_B19
+bg_29,bg,background,True,USGS one meter x34y456 PA South Central B2 2017
+bg_30,bg,background,True,USGS one meter x30y449 PA South Central B1 2017
+bg_31,bg,background,True,USGS 1 Meter 17 x55y453 PA_WesternPA_2019_D20
+bg_32,bg,background,True,USGS 1 Meter 17 x64y452 PA_WesternPA_2019_D20
+bg_33,bg,background,True,USGS 1 Meter 18 x45y447 PA_3_County_South_Central_2018_D18 | USGS one meter x45y447 DE DelawareValley HD 2015
+bg_34,bg,background,True,USGS 1 Meter 17 x56y448 PA_WesternPA_2019_D20
+bg_35,bg,background,True,USGS 1 Meter 17 x68y459 PA_Northcentral_2019_B19
+bg_36,bg,background,True,USGS 1 Meter 18 x31y463 PA_Northcentral_2019_B19
+bg_37,bg,background,True,USGS one meter x36y452 PA South Central B2 2017
+bg_38,bg,background,True,USGS 1 Meter 18 x43y445 PA_3_County_South_Central_2018_D18 | USGS one meter x43y445 MD-PA SandySupp 2014
+bg_39,bg,background,True,USGS 1 Meter 17 x55y443 PA_WesternPA_2019_D20
+bg_40,bg,background,True,USGS one meter x38y453 PA South Central B1 2017 | USGS one meter x38y453 PA South Central B2 2017
+bg_41,bg,background,True,USGS 1 Meter 17 x61y454 PA_WesternPA_2019_D20
+bg_42,bg,background,True,USGS 1 Meter 17 x61y460 PA_WesternPA_2019_D20
+bg_43,bg,background,True,USGS 1 Meter 17 x76y451 PA_Northcentral_2019_B19 | USGS 1 Meter 18 x25y451 PA_Northcentral_2019_B19
+bg_44,bg,background,True,USGS 1 Meter 17 x68y458 PA_Northcentral_2019_B19 | USGS 1 Meter 17 x68y458 PA_WesternPA_2019_D20
+bg_45,bg,background,True,USGS 1 Meter 17 x72y443 PA_Northcentral_2019_B19
+bg_46,bg,background,True,USGS 1 Meter 17 x59y467 PA_WesternPA_2019_D20
+bg_47,bg,background,True,USGS 1 Meter 18 x48y460 PA_Northcentral_2019_B19
+bg_48,bg,background,True,USGS 1 Meter 18 x41y460 PA_Northcentral_2019_B19 | USGS 1 Meter 18 x41y461 PA_Northcentral_2019_B19
+bg_49,bg,background,True,USGS 1 Meter 17 x76y448 PA_Northcentral_2019_B19 | USGS 1 Meter 18 x25y448 PA_Northcentral_2019_B19 | USGS one meter x25y448 PA South Central B1 2017 | USGS one meter x76y448 PA South Central B1 2017
+bg_50,bg,background,True,USGS 1 Meter 17 x58y466 PA_WesternPA_2019_D20
+bg_51,bg,background,True,USGS 1 Meter 17 x76y446 PA_Northcentral_2019_B19 | USGS 1 Meter 18 x25y446 PA_Northcentral_2019_B19
+bg_52,bg,background,True,USGS 1 Meter 17 x68y457 PA_Northcentral_2019_B19 | USGS 1 Meter 17 x68y457 PA_WesternPA_2019_D20 | USGS 1 Meter 17 x69y457 PA_Northcentral_2019_B19 | USGS 1 Meter 17 x69y457 PA_WesternPA_2019_D20
+bg_53,bg,background,True,USGS 1 Meter 17 x62y464 PA_WesternPA_2019_D20 | USGS 1 Meter 17 x62y465 PA_WesternPA_2019_D20
+bg_54,bg,background,True,USGS 1 Meter 18 x40y461 PA_Northcentral_2019_B19
+bg_55,bg,background,True,USGS 1 Meter 17 x75y458 PA_Northcentral_2019_B19 | USGS 1 Meter 18 x24y458 PA_Northcentral_2019_B19
+bg_56,bg,background,True,USGS one meter x32y459 PA South Central B2 2017
+bg_57,bg,background,True,USGS 1 Meter 17 x58y452 PA_WesternPA_2019_D20
+bg_58,bg,background,True,USGS 1 Meter 17 x56y454 PA_WesternPA_2019_D20
+bg_59,bg,background,True,USGS 1 Meter 17 x70y445 PA_Northcentral_2019_B19
+bg_60,bg,background,True,USGS 1 Meter 17 x59y457 PA_WesternPA_2019_D20
+aml_01,aml,20 Dry Strip Mine,True,USGS 1 Meter 18 x37y452 PA_3_County_South_Central_2018_D18 | USGS one meter x37y452 PA South Central B2 2017
+aml_02,aml,22 Spoil Pile,True,USGS 1 Meter 17 x73y453 PA_Northcentral_2019_B19
+aml_03,aml,22 Spoil Pile,True,USGS 1 Meter 18 x45y461 PA_Northcentral_2019_B19
+aml_04,aml,22 Spoil Pile,True,USGS 1 Meter 17 x64y454 PA_WesternPA_2019_D20
+aml_05,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x64y454 PA_WesternPA_2019_D20
+aml_06,aml,20 Dry Strip Mine,True,USGS 1 Meter 18 x42y454 PA_3_County_South_Central_2018_D18 | USGS 1 Meter 18 x42y454 PA_Northcentral_2019_B19
+aml_07,aml,22 Spoil Pile,True,USGS 1 Meter 17 x60y456 PA_WesternPA_2019_D20
+aml_08,aml,20 Dry Strip Mine,True,USGS 1 Meter 18 x39y451 PA_3_County_South_Central_2018_D18
+aml_09,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x64y454 PA_WesternPA_2019_D20
+aml_10,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x68y456 PA_Northcentral_2019_B19 | USGS 1 Meter 17 x68y456 PA_WesternPA_2019_D20
+aml_11,aml,22 Spoil Pile,True,USGS 1 Meter 18 x45y461 PA_Northcentral_2019_B19 | USGS 1 Meter 18 x46y461 PA_Northcentral_2019_B19
+aml_12,aml,22 Spoil Pile,True,USGS 1 Meter 17 x54y453 OH_Statewide_Phase2_2020_B20 | USGS 1 Meter 17 x54y453 PA_WesternPA_2019_D20
+aml_13,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x58y455 PA_WesternPA_2019_D20
+aml_14,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x68y457 PA_Northcentral_2019_B19 | USGS 1 Meter 17 x68y457 PA_WesternPA_2019_D20
+aml_15,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x65y455 PA_WesternPA_2019_D20
+aml_16,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x75y455 PA_Northcentral_2019_B19 | USGS 1 Meter 18 x24y455 PA_Northcentral_2019_B19
+aml_17,aml,22 Spoil Pile,True,USGS 1 Meter 17 x68y457 PA_Northcentral_2019_B19 | USGS 1 Meter 17 x68y457 PA_WesternPA_2019_D20
+aml_18,aml,20 Dry Strip Mine,True,USGS one meter x33y460 PA South Central B2 2017
+aml_19,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x62y455 PA_WesternPA_2019_D20
+aml_20,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x66y452 PA_WesternPA_2019_D20 | USGS 1 Meter 17 x66y453 PA_WesternPA_2019_D20
+aml_21,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x66y455 PA_WesternPA_2019_D20
+aml_22,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x76y456 PA_Northcentral_2019_B19 | USGS 1 Meter 18 x25y456 PA_Northcentral_2019_B19
+aml_23,aml,22 Spoil Pile,True,USGS 1 Meter 17 x62y454 PA_WesternPA_2019_D20
+aml_24,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x54y453 OH_Statewide_Phase2_2020_B20 | USGS 1 Meter 17 x54y453 PA_WesternPA_2019_D20
+aml_25,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x70y458 PA_Northcentral_2019_B19 | USGS 1 Meter 17 x70y459 PA_Northcentral_2019_B19
+aml_26,aml,20 Dry Strip Mine,True,USGS 1 Meter 18 x40y453 PA_3_County_South_Central_2018_D18
+aml_27,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x63y454 PA_WesternPA_2019_D20
+aml_28,aml,22 Spoil Pile,True,USGS 1 Meter 17 x68y453 PA_Northcentral_2019_B19 | USGS 1 Meter 17 x68y453 PA_WesternPA_2019_D20
+aml_29,aml,22 Spoil Pile,True,USGS 1 Meter 17 x62y458 PA_WesternPA_2019_D20
+aml_30,aml,20 Dry Strip Mine,True,USGS 1 Meter 18 x37y452 PA_3_County_South_Central_2018_D18 | USGS one meter x37y452 PA South Central B2 2017
+aml_31,aml,22 Spoil Pile,True,USGS 1 Meter 18 x38y452 PA_3_County_South_Central_2018_D18 | USGS one meter x38y452 PA South Central B1 2017 | USGS one meter x38y452 PA South Central B2 2017
+aml_32,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x72y454 PA_Northcentral_2019_B19 | USGS 1 Meter 17 x72y455 PA_Northcentral_2019_B19
+aml_33,aml,22 Spoil Pile,True,USGS 1 Meter 17 x58y455 PA_WesternPA_2019_D20 | USGS 1 Meter 17 x59y455 PA_WesternPA_2019_D20
+aml_34,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x60y449 PA_WesternPA_2019_D20
+aml_35,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x72y456 PA_Northcentral_2019_B19
+aml_36,aml,20 Dry Strip Mine,True,USGS 1 Meter 17 x67y453 PA_WesternPA_2019_D20
+aml_37,aml,21 Flooded Strip Mine,True,USGS 1 Meter 17 x65y442 PA_WesternPA_2019_D20 | USGS 1 Meter 17 x66y442 PA_WesternPA_2019_D20
+aml_38,aml,21 Flooded Strip Mine,True,USGS 1 Meter 18 x38y452 PA_3_County_South_Central_2018_D18 | USGS one meter x38y452 PA South Central B1 2017 | USGS one meter x38y452 PA South Central B2 2017
+aml_39,aml,22 Spoil Pile,True,USGS 1 Meter 17 x62y453 PA_WesternPA_2019_D20
+aml_40,aml,21 Flooded Strip Mine,True,USGS 1 Meter 18 x37y452 PA_3_County_South_Central_2018_D18 | USGS 1 Meter 18 x38y452 PA_3_County_South_Central_2018_D18 | USGS one meter x37y452 PA South Central B2 2017 | USGS one meter x38y452 PA South Central B1 2017 | USGS one meter x38y452 PA South Central B2 2017
+rch_rec_01,rch_rec,hearth,True,USGS 1 Meter 18 x44y452 PA_Northcentral_2019_B19
+rch_rec_02,rch_rec,hearth,True,USGS 1 Meter 18 x39y446 PA_Northcentral_2019_B19 | USGS one meter x39y446 PA Sandy 2014 | USGS one meter x39y446 PA South Central B1 2017
+rch_rec_03,rch_rec,hearth,True,USGS 1 Meter 18 x42y446 PA_3_County_South_Central_2018_D18
+rch_rec_04,rch_rec,hearth,True,USGS 1 Meter 18 x38y446 PA_Northcentral_2019_B19 | USGS one meter x38y446 PA Sandy 2014 | USGS one meter x38y446 PA South Central B1 2017
+rch_rec_05,rch_rec,hearth,True,USGS one meter x38y454 PA South Central B1 2017
+rch_rec_06,rch_rec,hearth,True,USGS 1 Meter 18 x43y451 PA_3_County_South_Central_2018_D18 | USGS 1 Meter 18 x43y451 PA_Northcentral_2019_B19
+rch_rec_07,rch_rec,hearth,True,USGS 1 Meter 17 x72y446 PA_Northcentral_2019_B19
+rch_rec_08,rch_rec,hearth,True,USGS 1 Meter 17 x62y457 PA_WesternPA_2019_D20 | USGS 1 Meter 17 x63y457 PA_WesternPA_2019_D20
+rch_rec_09,rch_rec,hearth,True,USGS 1 Meter 17 x71y446 PA_Northcentral_2019_B19
+rch_rec_10,rch_rec,hearth,True,USGS 1 Meter 17 x76y446 PA_Northcentral_2019_B19 | USGS 1 Meter 18 x25y446 PA_Northcentral_2019_B19
+rch_rec_11,rch_rec,hearth,True,USGS 1 Meter 17 x73y447 PA_Northcentral_2019_B19
+rch_rec_12,rch_rec,hearth,True,USGS one meter x35y454 PA South Central B2 2017

@@ -80,15 +80,13 @@ def windows():
 
 
 def main():
-    w, s43 = windows()
-    # SGL 43 bbox in UTM 18N (rounded to 10 m)
-    x0, y0, x1, y1 = s43.bounds
-    x0, y0, x1, y1 = [round(v, -1) for v in (x0 - 200, y0 - 200, x1 + 200, y1 + 200)]
+    w, _ = windows()
     w.to_csv(CAL / "windows.csv", index=False)
     print(w.kind.value_counts())
     jobs = []
     with ThreadPoolExecutor(6) as ex:
-        jobs.append(ex.submit(dem.fetch_bbox, "rch_sgl43", x0, y0, x1, y1, 26918))
+        # full extent of the SGL 43 lidar image assessed by Carter et al. (all predictions + FNs)
+        jobs.append(ex.submit(dem.fetch_bbox, "rch_sgl43_full", 427700, 4443300, 440200, 4452860, 26918))
         for r in w.itertuples():
             jobs.append(ex.submit(dem.fetch_window, r.win, r.lon, r.lat, r.half))
         done = 0

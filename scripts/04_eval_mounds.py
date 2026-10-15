@@ -26,7 +26,13 @@ for r in w.itertuples():
     if not ((r.kind == "site" and r.cls == "mound") or r.kind in ("bg", "aml")):
         continue
     z, _, _ = dem.read(ROOT / "data" / "dem" / f"{r.win}.tif")
-    d = D.detect_mounds(z)
+    cache = ROOT / "data" / "cache" / "mounds" / f"{r.win}.csv"
+    if cache.exists():
+        d = pd.read_csv(cache)
+    else:
+        d = D.detect_mounds(z)
+        cache.parent.mkdir(parents=True, exist_ok=True)
+        d.to_csv(cache, index=False)
     c = z.shape[0] / 2
     if r.kind == "site":
         d["dist"] = np.hypot(d.row - c, d.col - c)
@@ -104,6 +110,21 @@ summary = dict(
     median_window_candidates=float(P.n_window.median()),
 )
 (ROOT / "results" / "mounds_summary.json").write_text(json.dumps(summary, indent=2))
+aud = pd.read_csv(ROOT / "data" / "calibration" / "known_sites.csv").set_index("site_id").visual_audit
+P["audit"] = P.win.str.replace("site_", "").map(aud)
+by = []
+for o in ops:
+    t = o["threshold"]
+    for a, g in P.groupby("audit"):
+        by.append(dict(threshold=t, audit=a, n=len(g), recall=float((g.score >= t).mean())))
+    g = P
+    by.append(dict(threshold=t, audit="ALL", n=len(g), recall=float((g.score >= t).mean())))
+B = pd.DataFrame(by).drop_duplicates()
+B.to_csv(ROOT / "results" / "mounds_recall_by_visibility.csv", index=False)
+P.to_csv(ROOT / "results" / "mounds_known.csv", index=False)
+summary["recall_any_candidate_clear_domes"] = float(P[P.audit == "clear_dome"].score.notna().mean())
+(ROOT / "results" / "mounds_summary.json").write_text(json.dumps(summary, indent=2))
 print(json.dumps(summary, indent=2))
+print(B.to_string())
 print(O.round(3).to_string())
 print(P.sort_values("score").to_string())
