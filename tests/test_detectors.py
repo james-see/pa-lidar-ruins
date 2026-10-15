@@ -26,7 +26,7 @@ def test_mound_found_at_centre():
     assert len(d) >= 1
     top = d.iloc[0]
     assert np.hypot(top.row - 150, top.col - 150) < 5
-    assert 20 < top.diam < 40
+    assert 20 < top.diam < 50
 
 
 def test_no_mound_on_tilted_plane():

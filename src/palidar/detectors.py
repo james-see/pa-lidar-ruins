@@ -44,27 +44,50 @@ def _mean_filter(a, k):
 MOUND_SCALES = ((12, 0.25), (25, 0.35), (50, 0.5), (100, 0.8))  # (LRM radius m, min relief m)
 
 
-def detect_mounds(z, res=1.0, scales=MOUND_SCALES, min_diam=6, max_diam=110, min_solidity=0.85, max_ecc=0.85):
+def detect_mounds(
+    z,
+    res=1.0,
+    scales=MOUND_SCALES,
+    min_diam=6,
+    max_diam=110,
+    min_solidity=0.85,
+    max_ecc=0.85,
+    half_frac=0.5,
+):
+    """Per-peak "half-height" blobs on multi-scale LRMs.
+
+    For every local LRM maximum above the scale's relief threshold we grow the connected
+    region where LRM > half_frac * peak height. This isolates a mound sitting on a ridge or
+    bluff (a global threshold merges them into one irregular blob). The blob must be compact
+    (solidity), round (eccentricity) and of mound size.
+    """
     z = viz.fill_nan(z)
     rows = []
     for rad, thr in scales:
         l = viz.lrm(z, rad, res)
-        lab = measure.label(l > thr)
-        for p in measure.regionprops(lab, intensity_image=l):
-            d = p.equivalent_diameter_area * res
-            if d < min_diam or d > max_diam or d > 1.6 * rad:
+        pk = peak_local_max(l, min_distance=max(3, int(rad // 3)), threshold_abs=thr, exclude_border=5)
+        w = int(max_diam / res)
+        for r, c in pk:
+            h = float(l[r, c])
+            r0, c0 = max(0, r - w), max(0, c - w)
+            sub = l[r0 : r + w + 1, c0 : c + w + 1] > half_frac * h
+            lab = measure.label(sub)
+            k = lab[r - r0, c - c0]
+            if k == 0:
+                continue
+            reg = lab == k
+            if reg[0, :].any() or reg[-1, :].any() or reg[:, 0].any() or reg[:, -1].any():
+                continue  # leaks out of the search box: not a discrete feature
+            p = measure.regionprops(reg.astype(np.uint8))[0]
+            d = 2 * p.equivalent_diameter_area * res  # half-height blob is ~half the base width
+            if d < min_diam or d > max_diam or d > 2.5 * rad:
                 continue
             if p.solidity < min_solidity or p.eccentricity > max_ecc:
                 continue
-            h = float(p.intensity_max)
             per = max(p.perimeter, 1)
             circ = min(1.0, 4 * np.pi * p.area / per**2)
-            r, c = np.unravel_index(np.argmax(np.where(lab == p.label, l, -1e9)[p.slice]), p.image.shape)
-            r += p.slice[0].start
-            c += p.slice[1].start
-            # relief relative to diameter: real mounds are domes, not flat swells
-            shape_ok = h / d
-            score = h * circ * p.solidity * min(1.0, shape_ok / 0.03)
+            hd = h / d
+            score = h * circ * p.solidity * min(1.0, hd / 0.03)
             rows.append(
                 dict(
                     row=r,
@@ -75,7 +98,7 @@ def detect_mounds(z, res=1.0, scales=MOUND_SCALES, min_diam=6, max_diam=110, min
                     circ=circ,
                     solidity=p.solidity,
                     ecc=p.eccentricity,
-                    hd=shape_ok,
+                    hd=hd,
                     score=score,
                 )
             )
@@ -198,9 +221,9 @@ def berm_ditch_maps(z, res=1.0, sigmas=(1.5, 3.0), lrm_radius=12, ridge_thr=0.01
     return dict(lrm=l, ridge=ridge, valley=valley, pair=pair, orient=orient)
 
 
-def tile_scores(z, res=1.0, tile=100, maps=None):
+def tile_scores(z, res=1.0, tile=100, maps=None, **kw):
     """Per-tile linear-earthwork score. Returns DataFrame (tile_r, tile_c, density, odiv, score)."""
-    m = maps or berm_ditch_maps(z, res)
+    m = maps or berm_ditch_maps(z, res, **kw)
     pair, orient = m["pair"], m["orient"]
     H, W = pair.shape
     rows = []
