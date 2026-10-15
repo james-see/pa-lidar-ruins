@@ -51,7 +51,7 @@ def _export(xmin, ymin, xmax, ymax, epsg, res, retries=5):
     last = None
     for i in range(retries):
         try:
-            r = requests.get(IMAGE_SERVER, params=params, timeout=180)
+            r = requests.get(IMAGE_SERVER, params=params, timeout=(20, 120))
             r.raise_for_status()
             if r.content[:2] not in (b"II", b"MM"):
                 raise RuntimeError(f"not a tiff: {r.content[:200]!r}")
@@ -104,18 +104,23 @@ def fetch_bbox(
     ny = int(round((ymax - ymin) / res))
     arr = np.full((ny, nx), np.nan, dtype="float32")
     step = MAX_PX * res
-    yy, r0 = ymax, 0
-    while yy > ymin + 1e-6:
-        y0 = max(ymin, yy - step)
-        x, c0 = xmin, 0
-        while x < xmax - 1e-6:
-            x1 = min(xmax, x + step)
-            a = _export(x, y0, x1, yy, epsg, res)
+    jobs = []
+    for r0 in range(0, ny, MAX_PX):
+        for c0 in range(0, nx, MAX_PX):
+            x0, y1 = xmin + c0 * res, ymax - r0 * res
+            x1, y0 = min(xmax, x0 + step), max(ymin, y1 - step)
+            jobs.append((r0, c0, x0, y0, x1, y1))
+    from concurrent.futures import ThreadPoolExecutor
+
+    def one(j):
+        r0, c0, x0, y0, x1, y1 = j
+        return r0, c0, _export(x0, y0, x1, y1, epsg, res)
+
+    with ThreadPoolExecutor(min(8, len(jobs))) as ex:
+        for k, (r0, c0, a) in enumerate(ex.map(one, jobs), 1):
             arr[r0 : r0 + a.shape[0], c0 : c0 + a.shape[1]] = a
-            c0 += a.shape[1]
-            x = x1
-        r0 += int(round((yy - y0) / res))
-        yy = y0
+            if len(jobs) > 4:
+                print(f"{name}: tile {k}/{len(jobs)}", flush=True)
     transform = rasterio.transform.from_origin(xmin, ymax, res, res)
     tmp = out.with_suffix(".part.tif")
     with rasterio.open(

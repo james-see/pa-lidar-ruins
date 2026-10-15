@@ -7,13 +7,16 @@ license = "MIT"
 requires-python = ">=3.12"
 dependencies = [
     "geopandas>=1.2.0",
+    "joblib>=1.6.0",
     "matplotlib>=3.11.2",
     "numpy>=2.5.4",
     "pandas>=3.0.6",
+    "pyarrow>=26.0.0",
     "pyproj>=3.8.0",
     "rasterio>=1.5.2",
     "requests>=2.34.2",
     "scikit-image>=0.26.0",
+    "scikit-learn>=1.9.1",
     "scipy>=1.18.1",
     "shapely>=2.2.0",
 ]
@@ -40,6 +43,7 @@ testpaths = ["tests"]
 dev = [
     "pytest>=9.1.1",
     "ruff>=0.17.1",
+    "tabulate>=0.10.0",
 ]
 
 [tool.ruff.lint.per-file-ignores]
