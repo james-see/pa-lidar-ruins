@@ -2,9 +2,10 @@
 
 Reads data/private/search/hearths/*.parquet + the cached search DEMs; writes p_cnn into
 data/private/search/hearths_cnn/ (git-ignored). Re-run safe: finished tiles are skipped.
-usage: uv run python scripts/16_search_cnn.py [--cls=hearths_all] [--wait] [--delete-dem]
+usage: uv run python scripts/16_search_cnn.py [--cls=hearths_all] [--wait] [--delete-dem] [--shard=k/n]
 """
 
+import hashlib
 import sys
 import time
 from pathlib import Path
@@ -20,6 +21,14 @@ ROOT = Path(__file__).resolve().parents[1]
 CLS = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--cls=")), "hearths")
 IN = ROOT / "data" / "private" / "search" / CLS
 OUT = ROOT / "data" / "private" / "search" / f"{CLS}_cnn"
+SHARD = next((a.split("=", 1)[1] for a in sys.argv if a.startswith("--shard=")), "0/1")  # k/n: parallel workers
+K, NSH = (int(v) for v in SHARD.split("/"))
+
+
+def mine(f):
+    return int(hashlib.md5(f.name.encode()).hexdigest(), 16) % NSH == K
+
+
 DEMD = ROOT / "data" / "dem" / "search"
 
 
@@ -31,7 +40,7 @@ def main():
     keep_dem = set(TT[TT.aoi != CLS].tile)  # never delete DEMs used by the phase-2 searches
     n_units = TT[TT.aoi == CLS].groupby("tile").size().to_dict()  # tiles shared by county units
     while True:
-        todo = [f for f in sorted(IN.glob("*.parquet")) if not (OUT / f.name).exists()]
+        todo = [f for f in sorted(IN.glob("*.parquet")) if not (OUT / f.name).exists() and mine(f)]
         for f in todo:
             t0 = time.time()
             c = pd.read_parquet(f)
