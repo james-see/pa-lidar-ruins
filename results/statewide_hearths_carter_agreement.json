@@ -1,0 +1,21 @@
+{
+  "master_all": {
+    "points_in_searched_tiles": 46512,
+    "within_30m_of_cnn_detection": 9450,
+    "fraction": 0.203
+  },
+  "master_confirmed_Y": {
+    "points_in_searched_tiles": 911,
+    "within_30m_of_cnn_detection": 674,
+    "fraction": 0.74
+  },
+  "manual": {
+    "points_in_searched_tiles": 4324,
+    "within_30m_of_cnn_detection": 2719,
+    "fraction": 0.629
+  },
+  "gnis_furnace_names": {
+    "n": 74,
+    "with_cnn_hearth_within_2km": 32
+  }
+}

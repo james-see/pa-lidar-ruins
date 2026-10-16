@@ -1,0 +1,14 @@
+stage,n
+tile_jobs_expected,3994.0
+tile_jobs_cnn_scored,3994.0
+searchable_km2,18193.6
+geometric_candidates,37399572.0
+cnn_p>=0.5,44916.0
+cnn_p>=0.9,31953.0
+deduplicated_8m,31948.0
+matching_Carter_et_al_30m,9533.0
+hearth_fields_dbscan250m_min5,928.0
+hearths_in_fields,23453.0
+fields_mostly_new(<20%_Carter),465.0
+new_fields_>5km_from_GNIS_furnace,363.0
+new_fields_>5km_from_GNIS_furnace_and_>=50_hearths,24.0
