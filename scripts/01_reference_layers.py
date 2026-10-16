@@ -22,6 +22,8 @@ LAYERS = {
     "state_forests": (f"{B}/DCNR/MapServer/6", "1=1"),
     "state_parks": (f"{B}/DCNR/MapServer/8", "1=1"),
     "physio_provinces": (f"{B}/DCNR/MapServer/16", "1=1"),
+    "counties": (f"{B}/PennDOT/MapServer/7", "1=1"),
+    "anf_compartments": (f"{B}/AlleghenyNationalForest/MapServer/0", "1=1"),
     "aml_polys": (
         f"{B}/DEP/MapServer/1",
         "sf_probl_1 LIKE '%Spoil%' OR sf_probl_1 LIKE '%Strip%' OR sf_probl_1 LIKE '%Gob%' "

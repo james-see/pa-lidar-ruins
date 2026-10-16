@@ -94,10 +94,12 @@ def fetch_bbox(
     epsg: int,
     res: float = 1.0,
     overwrite: bool = False,
+    out_dir: Path | None = None,
 ) -> Path:
     """Fetch a DEM for a UTM bbox (metres), tiling requests at MAX_PX."""
-    DEM_DIR.mkdir(parents=True, exist_ok=True)
-    out = DEM_DIR / f"{name}.tif"
+    d = Path(out_dir) if out_dir else DEM_DIR
+    d.mkdir(parents=True, exist_ok=True)
+    out = d / f"{name}.tif"
     if out.exists() and not overwrite:
         return out
     nx = int(round((xmax - xmin) / res))
