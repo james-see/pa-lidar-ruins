@@ -1,0 +1,17 @@
+file,cls,county,review_score,verdict
+figures/gallery/hearths_01_Cumberland.png,hearths,Cumberland,3,survived blind review; cross-check: hearth field confirmed (lidar)
+figures/gallery/hearths_02_Cumberland.png,hearths,Cumberland,3,survived blind review; cross-check: hearth field confirmed (lidar)
+figures/gallery/hearths_03_Huntingdon.png,hearths,Huntingdon,3,survived blind review; cross-check: hearth field confirmed (lidar)
+figures/gallery/hearths_04_Cumberland.png,hearths,Cumberland,3,survived blind review; cross-check: hearth field confirmed (lidar)
+figures/gallery/hearths_05_Cumberland.png,hearths,Cumberland,3,survived blind review; cross-check: hearth field confirmed (lidar)
+figures/gallery/hearths_06_Franklin.png,hearths,Franklin,3,survived blind review; cross-check: hearth field confirmed (lidar)
+figures/gallery/hearths_07_Huntingdon.png,hearths,Huntingdon,0,rejected in blind review
+figures/gallery/mounds_01_Mckean.png,mounds,Mckean,2,survived blind review; cross-check: unresolved (lean natural/modern)
+figures/gallery/mounds_02_Somerset.png,mounds,Somerset,0,rejected in blind review
+figures/gallery/mounds_03_Mckean.png,mounds,Mckean,0,rejected in blind review
+figures/gallery/mounds_04_Fayette.png,mounds,Fayette,0,rejected in blind review
+figures/gallery/works_01_Somerset.png,works,Somerset,2,survived blind review; cross-check: rejected
+figures/gallery/works_02_Dauphin.png,works,Dauphin,2,survived blind review; cross-check: unresolved
+figures/gallery/works_03_Dauphin.png,works,Dauphin,0,rejected in blind review
+figures/gallery/works_04_Dauphin.png,works,Dauphin,0,rejected in blind review
+figures/gallery/works_05_Dauphin.png,works,Dauphin,0,rejected in blind review
