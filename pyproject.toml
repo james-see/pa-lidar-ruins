@@ -11,6 +11,7 @@ dependencies = [
     "matplotlib>=3.11.2",
     "numpy>=2.5.4",
     "pandas>=3.0.6",
+    "pillow>=12.3.0",
     "pyarrow>=26.0.0",
     "pyproj>=3.8.0",
     "rasterio>=1.5.2",

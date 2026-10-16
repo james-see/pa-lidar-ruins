@@ -1,0 +1,10 @@
+group,src,n,mean,n_score_ge2,n_score3
+hearths,candidate,10,2.7,9,9
+hearths,control_known,5,2.0,4,2
+hearths,control_negative,10,0.0,0,0
+mounds,candidate,20,0.4,1,0
+mounds,control_known,8,2.25,6,6
+mounds,control_negative,10,0.1,0,0
+works,candidate,20,0.35,2,0
+works,control_known,12,2.17,9,6
+works,control_negative,10,0.0,0,0

@@ -1,0 +1,24 @@
+cls,stage,n
+hearths,searchable_km2,2315.7
+mounds,searchable_km2,372.2
+works,searchable_km2,986.0
+hearths,tiles_processed,473.0
+hearths,geometric_candidates_in_searchable_area,4000810.0
+hearths,phase1_gbm_p>=0.9 (for comparison),13957.0
+hearths,cnn_p>=0.5,16378.0
+hearths,cnn_p>=0.9,13375.0
+hearths,deduplicated_8m,13372.0
+hearths,matching_Carter_et_al_points_30m,1335.0
+hearths,hearth_fields_dbscan250m_min5,349.0
+hearths,fields_mostly_new(<20%_known),308.0
+hearths,new_fields_>5km_from_GNIS_furnace,242.0
+mounds,tiles_processed,127.0
+mounds,domes_score>=1_in_searchable_area,13395.0
+mounds,score>=2.0,2828.0
+mounds,"mound-sized (h 0.5-8 m, d 8-50 m)",2343.0
+mounds,deduplicated_15m,2307.0
+works,tiles_processed,304.0
+works,100m_tiles_scored (>=50% searchable),102447.0
+works,score>=bg_99.5th_pct,60.0
+works,hot_tile_groups,38.0
+works,groups_deduplicated,38.0
