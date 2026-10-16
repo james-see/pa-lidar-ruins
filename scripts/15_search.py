@@ -49,6 +49,14 @@ def init(cls):
 
 
 def run_tile(t):
+    """Never raises: a failed tile is reported back and retried at the end of the run."""
+    try:
+        return _run_tile(t)
+    except Exception as e:  # noqa: BLE001
+        return t["tile"], f"FAILED {type(e).__name__}: {str(e)[:160]}", None
+
+
+def _run_tile(t):
     cls = _G["cls"]
     out = PRIV / cls / f"{t['tile']}__{slug(t['unit'])}.parquet"
     if out.exists():
@@ -118,11 +126,31 @@ def main():
         T = T[T.unit.isin([u.strip() for u in a.units.split(",")])]
     print(a.cls, len(T), "tiles,", round(T.aoi_km2.sum(), 1), "km2 of AOI", flush=True)
     t0 = time.time()
-    with Pool(a.workers, initializer=init, initargs=(a.cls,)) as pool:
-        for i, (tile, msg, _) in enumerate(pool.imap_unordered(run_tile, T.to_dict("records")), 1):
-            el = time.time() - t0
-            eta = el / i * (len(T) - i) / 3600
-            print(f"[{el:6.0f}s] {i}/{len(T)} ETA {eta:.1f} h {tile}: {msg}", flush=True)
+    fail_log = PRIV / a.cls / "failed_tiles.txt"
+    fail_log.parent.mkdir(parents=True, exist_ok=True)
+    recs = T.to_dict("records")
+    for attempt in range(3):  # main pass, then up to 2 retry passes over failed tiles
+        failed = []
+        workers = a.workers if attempt == 0 else max(2, a.workers // 3)
+        n_new = 0
+        with Pool(workers, initializer=init, initargs=(a.cls,)) as pool:
+            for i, (tile, msg, _) in enumerate(pool.imap_unordered(run_tile, recs), 1):
+                el = time.time() - t0
+                n_new += msg != "cached"
+                eta = el / max(n_new, 1) * (len(recs) - i) / 3600  # cached tiles don't count toward the rate
+                tag = "" if attempt == 0 else f"retry{attempt} "
+                print(f"[{el:6.0f}s] {tag}{i}/{len(recs)} ETA {eta:.1f} h {tile}: {msg}", flush=True)
+                if msg.startswith("FAILED"):
+                    failed.append(tile)
+                    with fail_log.open("a") as fh:
+                        fh.write(f"{time.strftime('%Y-%m-%d %H:%M')} attempt{attempt} {tile} {msg}\n")
+        if not failed:
+            break
+        print(f"{len(failed)} tiles failed in pass {attempt}; retrying after a pause", flush=True)
+        time.sleep(120)
+        recs = [r for r in recs if r["tile"] in set(failed)]
+    print(f"pass A finished; permanently failed tiles: {len(failed)}", flush=True)
+    (PRIV / a.cls / "_PASS_A_DONE").write_text(str(len(failed)))
 
 
 if __name__ == "__main__":

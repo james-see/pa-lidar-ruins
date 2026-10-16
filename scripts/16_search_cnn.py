@@ -53,7 +53,8 @@ def main():
             msg = f"{len(c)} cand, {n9} p_cnn>=0.9, {time.time() - t0:.0f}s"
             print(f"{time.strftime('%H:%M')} {nd}/{n_tiles} {f.stem}: {msg}", flush=True)
         done = len(list(OUT.glob("*.parquet")))
-        if "--wait" not in sys.argv or done >= n_tiles:
+        a_done = (IN / "_PASS_A_DONE").exists() and not [f for f in IN.glob("*.parquet") if not (OUT / f.name).exists()]
+        if "--wait" not in sys.argv or done >= n_tiles or a_done:
             break
         time.sleep(30)
     print("done", done, "tiles", flush=True)

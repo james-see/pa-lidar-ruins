@@ -7,6 +7,7 @@ raster has metric pixels and north-up geometry. Results are cached as compressed
 from __future__ import annotations
 
 import math
+import random
 import time
 from pathlib import Path
 
@@ -34,7 +35,7 @@ def to_utm(lon: float, lat: float, epsg: int | None = None):
     return x, y, epsg
 
 
-def _export(xmin, ymin, xmax, ymax, epsg, res, retries=5):
+def _export(xmin, ymin, xmax, ymax, epsg, res, retries=6):
     w = int(round((xmax - xmin) / res))
     h = int(round((ymax - ymin) / res))
     params = dict(
@@ -66,8 +67,32 @@ def _export(xmin, ymin, xmax, ymax, epsg, res, retries=5):
             return a
         except Exception as e:  # noqa: BLE001
             last = e
-            time.sleep(3 * (i + 1))
+            # exponential backoff with jitter; 5xx / timeouts from the 3DEP ImageServer are usually load
+            code = getattr(getattr(e, "response", None), "status_code", None)
+            base = 10 if (code is None or code >= 500) else 3
+            time.sleep(min(base * 2**i, 180) * (0.75 + 0.5 * random.random()))
     raise RuntimeError(f"export failed after {retries} tries: {last}")
+
+
+def _export_split(xmin, ymin, xmax, ymax, epsg, res, min_px=500):
+    """_export, but if the server keeps failing on this bbox, split it into 4 and stitch."""
+    try:
+        return _export(xmin, ymin, xmax, ymax, epsg, res)
+    except RuntimeError:
+        w = int(round((xmax - xmin) / res))
+        h = int(round((ymax - ymin) / res))
+        if max(w, h) <= min_px:
+            raise
+        print(f"splitting {w}x{h} px request after repeated failures", flush=True)
+        a = np.full((h, w), np.nan, dtype="float32")
+        cw, ch = (w // 2) * res, (h // 2) * res
+        for r0, (yb, yt) in enumerate([(ymax - ch, ymax), (ymin, ymax - ch)]):
+            for c0, (xl, xr) in enumerate([(xmin, xmin + cw), (xmin + cw, xmax)]):
+                sub = _export_split(xl, yb, xr, yt, epsg, res, min_px)
+                rr = 0 if r0 == 0 else int(round(ch / res))
+                cc = 0 if c0 == 0 else int(round(cw / res))
+                a[rr : rr + sub.shape[0], cc : cc + sub.shape[1]] = sub
+        return a
 
 
 def fetch_window(
@@ -116,7 +141,7 @@ def fetch_bbox(
 
     def one(j):
         r0, c0, x0, y0, x1, y1 = j
-        return r0, c0, _export(x0, y0, x1, y1, epsg, res)
+        return r0, c0, _export_split(x0, y0, x1, y1, epsg, res)
 
     with ThreadPoolExecutor(min(8, len(jobs))) as ex:
         for k, (r0, c0, a) in enumerate(ex.map(one, jobs), 1):
