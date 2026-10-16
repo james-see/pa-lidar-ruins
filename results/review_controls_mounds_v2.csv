@@ -1,0 +1,4 @@
+src,n,mean,ge2,eq3,round
+candidate,20,0.4,1,0,2_mounds_v2
+control_known,8,2.25,7,3,2_mounds_v2
+control_negative,10,0.0,0,0,2_mounds_v2

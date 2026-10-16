@@ -309,11 +309,71 @@ positives are visible too.
 ![earthwork candidate](figures/gallery/works_02_Dauphin.png)
 ![rejected earthwork candidate](figures/gallery/works_03_Dauphin.png)
 
+### Mound re-tune (`src/palidar/moundctx.py`, `scripts/23_mound_retune.py`, `24_mound_review2.py`)
+
+**Goal:** rank 1–3 m domes on flat terraces above tall knobs and spoil.
+
+**Method**
+* **New features** describe each dome's setting:
+  * slope and roughness of a ring around the dome
+  * topographic position at 50 m and 150 m
+  * number of neighbouring domes within 60 m
+  * log height and width
+* **Data:**
+  * known mounds from the phase-1 calibration, which keep their dev/test split
+  * random-PA and strip-mine windows
+  * 13,395 search detections (natural knobs, spoil, rail bumps) as known false positives, split by
+    seeded 20 km blocks into train and held-out halves
+* **Scorers compared:**
+  * the phase-1 dome score
+  * a hand-built size/setting prior (no fitting)
+  * a logistic regression on the new features, fitted on dev windows and train blocks only
+* **Selection and thresholds:** the scorer is picked on dev (logistic). Thresholds are set on dev to
+  give 3, 1 and 0.3 random-PA detections per km².
+* **Search re-scoring:** the search detections were re-scored with a 2-fold block cross-fit, so no
+  detection is scored by a model that saw it.
+
+**Before vs after** (`results/mounds_v2_table.csv`). The test split has 23 known mounds, 14 of them
+clear domes. 8 of the 23 have no detection at all at score ≥ 1, which caps recall at 65.2%.
+
+| operating point (dev random-PA per km²) | scorer | test recall, all | test recall, clear domes | random-PA per km² | strip-mine per km² | held-out search area per km² |
+|---|---|---|---|---|---|---|
+| 1.0 | phase-1 score | 47.8% | 78.6% | 2.36 | 7.99 | 6.28 |
+| 1.0 | **logistic, context** | **60.9%** | **85.7%** | 2.41 | 3.19 | **0.63** |
+| 0.3 | phase-1 score | 34.8% | 57.1% | 0.95 | 3.47 | 2.54 |
+| 0.3 | **logistic, context** | **60.9%** | **85.7%** | 0.79 | 1.11 | **0.22** |
+| 0.3 | hand-built prior | 17.4% | 14.3% | 0.60 | 0.45 | 0.16 |
+
+**Findings from the calibration**
+* At the same false-positive rate on random PA, the context model keeps far more known mounds.
+* In held-out search terrain it flags about 10× fewer domes.
+* The hand-built "1–3 m on flat ground" prior performs poorly. Several reference mounds are larger
+  than 3 m, and the prior ranks them down.
+* Mound candidates at the 1 per km² operating point fall from 2,307 (phase-1 size filter) to 382.
+  County counts are in `results/search_counts_by_county_mounds_v2.csv`.
+
+**Round-2 blind review** (`results/review_controls_mounds_v2.csv`)
+* **Set-up:** the new top 20 (at most 5 per county), plus 8 known mounds and 10 negative windows
+  that were not used as controls in round 1.
+
+| | candidates | known-site controls | negative controls |
+|---|---|---|---|
+| mean score | 0.40 | 2.25 | 0.00 |
+| scored ≥ 2 | 1 of 20 | 7 of 8 | 0 of 10 |
+
+* **No improvement at the very top of the list.** The calibration gains above did not move the
+  top 20, which round 1 had also scored 0.40 / 1 of 20. The model favours flat surroundings, so its
+  very top is now dominated by riverbanks, shorelines and flats rather than knobs.
+* **The one survivor (Warren Co.):** a small dome on a hilltop that the 1954 topo shows as a cleared
+  field. It is unresolved and could be a field-clearance pile.
+* **Next step:** add hard negatives drawn from the extreme top of the ranked list (an active-learning
+  loop) rather than random search detections.
+
 ### Takeaways
 
 1. **The hearth CNN is a large, test-verified improvement** and is ready for statewide use.
-2. **Mounds are the weak link.** Ranking by dome score favours 5–8 m natural knobs, and 19 of the
-   top 20 failed review. Next step: re-rank for 1–3 m domes on flat terraces and add hard-negative training.
+2. **Mounds are still the weak link.** The context re-rank cut false positives about 10× at equal
+   recall in calibration, but the blind review of its top 20 still found only 1 plausible lead (see the mound re-tune section).
 3. **Earthwork detection in mining country** stays dominated by spoil and benches even after masking.
    The best leads came from areas without mining.
 4. **No candidate is presented as a discovery.** Unresolved leads go into a private report draft
@@ -343,6 +403,9 @@ uv run python scripts/18_candidates.py && uv run python scripts/19_review_chips.
 # (blind scoring -> results/private/review/scores.csv)
 uv run python scripts/20_crosscheck.py && uv run python scripts/21_public_gallery.py
 uv run python scripts/22_private_report.py
+uv run python scripts/23_mound_retune.py && uv run python scripts/24_mound_review2.py
+uv run python scripts/25_statewide_aoi.py      # remaining public land (17,005 km2) for hearths
+uv run python scripts/15_search.py hearths_all --workers 12 & uv run python scripts/16_search_cnn.py --cls=hearths_all --wait --delete-dem
 uv run pytest && uv run ruff check .
 ```
 
