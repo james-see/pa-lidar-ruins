@@ -44,7 +44,7 @@ def init(cls):
     _G["cls"] = cls
     A = gpd.read_file(S.AOI_DIR / "aois.gpkg")
     _G["aoi"] = {r.unit: r.geometry for r in A.itertuples()}
-    if cls == "hearths":
+    if cls.startswith("hearths"):
         _G["clf"], _G["feats"] = joblib.load(ROOT / "data" / "cache" / "hearth_model.joblib")
 
 
@@ -74,7 +74,7 @@ def run_tile(t):
     cov_km2 = float((allowed & inner).sum()) / 1e6
     res = None
     if cov_km2 > 0.01:
-        if cls == "hearths":
+        if cls.startswith("hearths"):
             c = Hh.candidates_with_features(z)
             if not c.empty:
                 r, cc = c.row.to_numpy().astype(int), c.col.to_numpy().astype(int)
@@ -108,7 +108,7 @@ def run_tile(t):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument("cls", choices=["hearths", "mounds", "works"])
+    ap.add_argument("cls", choices=["hearths", "hearths_all", "mounds", "works"])
     ap.add_argument("--units", default="")
     ap.add_argument("--workers", type=int, default=8)
     a = ap.parse_args()
@@ -120,7 +120,9 @@ def main():
     t0 = time.time()
     with Pool(a.workers, initializer=init, initargs=(a.cls,)) as pool:
         for i, (tile, msg, _) in enumerate(pool.imap_unordered(run_tile, T.to_dict("records")), 1):
-            print(f"[{time.time() - t0:6.0f}s] {i}/{len(T)} {tile}: {msg}", flush=True)
+            el = time.time() - t0
+            eta = el / i * (len(T) - i) / 3600
+            print(f"[{el:6.0f}s] {i}/{len(T)} ETA {eta:.1f} h {tile}: {msg}", flush=True)
 
 
 if __name__ == "__main__":
