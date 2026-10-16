@@ -107,3 +107,26 @@ def candidates_with_features(z, res=1.0, block=2000):
         keep = (c.row >= i0) & (c.row < i1) & (c.col >= j0) & (c.col < j1)
         out.append(pd.concat([c[["row", "col"]], f], axis=1)[keep.to_numpy()])
     return pd.concat(out, ignore_index=True) if out else pd.DataFrame()
+
+
+# ----------------------------------------------------------------------------- CNN inputs
+PATCH = 48
+
+
+def patch_channels(z, res=1.0):
+    """3-channel image used by the hearth CNN: LRM(10 m), slope, fine LRM(3 m), each scaled to ~[-1, 1]."""
+    z = viz.fill_nan(z)
+    zs = ndi.gaussian_filter(z, 0.7)
+    c0 = np.clip(viz.lrm(zs, 10, res) / 1.5, -1, 1)
+    c1 = np.clip(viz.slope_deg(zs, res) / 40.0, 0, 1.5) - 0.5
+    c2 = np.clip(viz.lrm(zs, 3, res) / 0.5, -1, 1)
+    return np.stack([c0, c1, c2]).astype("float16")
+
+
+def extract_patches(ch, rows, cols, size=PATCH):
+    h = size // 2
+    _, H, W = ch.shape
+    rows = np.clip(np.asarray(rows, int), h, H - h)
+    cols = np.clip(np.asarray(cols, int), h, W - h)
+    yy, xx = np.mgrid[-h:h, -h:h]
+    return ch[:, rows[:, None, None] + yy[None], cols[:, None, None] + xx[None]].transpose(1, 0, 2, 3)

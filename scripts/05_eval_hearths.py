@@ -107,9 +107,7 @@ def main():
         rec = (d_ref <= R_POS).mean()
         d_det, _ = cKDTree(ref_te).query(det)
         prec = (d_det <= R_POS).mean()
-        rows.append(
-            dict(threshold=t, recall=rec, precision=prec, n_det=len(det), det_per_km2=len(det) / area_te)
-        )
+        rows.append(dict(threshold=t, recall=rec, precision=prec, n_det=len(det), det_per_km2=len(det) / area_te))
     cw = pd.DataFrame(rows)
     cw.to_csv(ROOT / "results" / "hearths_sgl43_test_curve.csv", index=False)
 
@@ -169,9 +167,7 @@ def main():
         sgl43_reference_hearths=int(len(ref)),
         sgl43_test_reference=int(len(ref_te)),
         sgl43_candidates=int(len(c)),
-        candidate_recall_test=float(
-            (cKDTree(ct[["row", "col"]].to_numpy()).query(ref_te)[0] <= R_POS).mean()
-        ),
+        candidate_recall_test=float((cKDTree(ct[["row", "col"]].to_numpy()).query(ref_te)[0] <= R_POS).mean()),
         train_pos=int(((y == 1) & tr).sum()),
         train_neg=int(((y == 0) & tr).sum()),
     )

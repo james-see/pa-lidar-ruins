@@ -44,9 +44,7 @@ def fig_methods():
         axs[i, 2].imshow(np.clip(l, -0.8, 0.8), cmap="RdYlBu_r")
         axs[i, 3].imshow(viz.combo_rgb(z, 15))
         axs[i, 0].set_ylabel(name, fontsize=11)
-    for j, t in enumerate(
-        ["hillshade (NW sun)", "16-direction hillshade", "local relief (DEM - smoothed)", "combo"]
-    ):
+    for j, t in enumerate(["hillshade (NW sun)", "16-direction hillshade", "local relief (DEM - smoothed)", "combo"]):
         axs[0, j].set_title(t)
     for a in axs.flat:
         a.set_xticks([])
@@ -82,9 +80,7 @@ def fig_gallery():
         a.imshow(viz.combo_rgb(chip(f"site_{s}", 300), 15))
         a.set_title(f"{K.loc[s, 'name'][:26]} ({K.loc[s, 'state']})", fontsize=8)
         a.axis("off")
-    fig.suptitle(
-        "Calibration: known, public sites in the same lidar (300 m windows, combo view)", fontsize=12
-    )
+    fig.suptitle("Calibration: known, public sites in the same lidar (300 m windows, combo view)", fontsize=12)
     fig.tight_layout()
     fig.savefig(FIG / "02_known_sites_gallery.png", dpi=80)
 
@@ -150,9 +146,7 @@ def fig_hearths():
     )
     for t in (0.5, 0.8, 0.9, 0.95):
         rr = cw.set_index("threshold").loc[t]
-        ax[0].annotate(
-            f"p≥{t}", (rr.recall, rr.precision), fontsize=8, xytext=(4, 4), textcoords="offset points"
-        )
+        ax[0].annotate(f"p≥{t}", (rr.recall, rr.precision), fontsize=8, xytext=(4, 4), textcoords="offset points")
     ax[0].set_xlabel("recall")
     ax[0].set_ylabel("precision")
     ax[0].set_title("Detector B (charcoal hearths): SGL 43 held-out east half")
@@ -173,9 +167,7 @@ def fig_hearths():
     z = viz.fill_nan(src.read(1, window=((r0, r0 + 800), (c0, c0 + 800))))
     ax[1].imshow(viz.combo_rgb(z, 10, clip=0.4))
     k = (rr[:, 0] >= r0) & (rr[:, 0] < r0 + 800) & (rr[:, 1] >= c0) & (rr[:, 1] < c0 + 800)
-    ax[1].scatter(
-        rr[k, 1] - c0, rr[k, 0] - r0, s=60, facecolors="none", edgecolors="k", label="reference hearth"
-    )
+    ax[1].scatter(rr[k, 1] - c0, rr[k, 0] - r0, s=60, facecolors="none", edgecolors="k", label="reference hearth")
     dk = det[(det.row >= r0) & (det.row < r0 + 800) & (det.col >= c0) & (det.col < c0 + 800)]
     ax[1].scatter(dk.col - c0, dk.row - r0, s=10, c="b", label="detection p≥0.9")
     found = (cKDTree(dk[["row", "col"]].to_numpy()).query(rr[k])[0] <= 6).mean() if len(dk) else 0

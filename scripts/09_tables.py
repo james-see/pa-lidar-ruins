@@ -27,9 +27,7 @@ T.to_csv(R / "mounds_table.csv", index=False)
 print(T.round(2).to_markdown(index=False))
 E = pd.read_csv(R / "earthworks_known_multi.csv")
 out = []
-for (cls, lab), g in E.assign(vis=np.where(E.audit == "clear", "clear", "faint/none")).groupby(
-    ["cls", "vis"]
-):
+for (cls, lab), g in E.assign(vis=np.where(E.audit == "clear", "clear", "faint/none")).groupby(["cls", "vis"]):
     out.append(
         dict(
             cls=cls,

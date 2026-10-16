@@ -1,0 +1,341 @@
+{
+ "sgl43_east": {
+  "gbm_phase1": {
+   "0.05": {
+    "recall": 0.919,
+    "precision": 0.035,
+    "det_per_km2": 229.556
+   },
+   "0.1": {
+    "recall": 0.891,
+    "precision": 0.056,
+    "det_per_km2": 138.444
+   },
+   "0.15": {
+    "recall": 0.874,
+    "precision": 0.07,
+    "det_per_km2": 107.481
+   },
+   "0.2": {
+    "recall": 0.866,
+    "precision": 0.083,
+    "det_per_km2": 89.623
+   },
+   "0.25": {
+    "recall": 0.853,
+    "precision": 0.095,
+    "det_per_km2": 77.523
+   },
+   "0.3": {
+    "recall": 0.835,
+    "precision": 0.105,
+    "det_per_km2": 68.987
+   },
+   "0.35": {
+    "recall": 0.828,
+    "precision": 0.116,
+    "det_per_km2": 61.456
+   },
+   "0.4": {
+    "recall": 0.816,
+    "precision": 0.126,
+    "det_per_km2": 56.0
+   },
+   "0.45": {
+    "recall": 0.797,
+    "precision": 0.135,
+    "det_per_km2": 51.13
+   },
+   "0.5": {
+    "recall": 0.785,
+    "precision": 0.147,
+    "det_per_km2": 46.176
+   },
+   "0.55": {
+    "recall": 0.779,
+    "precision": 0.16,
+    "det_per_km2": 42.092
+   },
+   "0.6": {
+    "recall": 0.756,
+    "precision": 0.171,
+    "det_per_km2": 38.176
+   },
+   "0.65": {
+    "recall": 0.738,
+    "precision": 0.188,
+    "det_per_km2": 33.992
+   },
+   "0.7": {
+    "recall": 0.721,
+    "precision": 0.203,
+    "det_per_km2": 30.628
+   },
+   "0.75": {
+    "recall": 0.705,
+    "precision": 0.228,
+    "det_per_km2": 26.661
+   },
+   "0.8": {
+    "recall": 0.684,
+    "precision": 0.263,
+    "det_per_km2": 22.46
+   },
+   "0.85": {
+    "recall": 0.651,
+    "precision": 0.304,
+    "det_per_km2": 18.477
+   },
+   "0.9": {
+    "recall": 0.61,
+    "precision": 0.367,
+    "det_per_km2": 14.36
+   },
+   "0.95": {
+    "recall": 0.49,
+    "precision": 0.51,
+    "det_per_km2": 8.301
+   }
+  },
+  "cnn": {
+   "0.05": {
+    "recall": 0.971,
+    "precision": 0.34,
+    "det_per_km2": 24.686
+   },
+   "0.1": {
+    "recall": 0.971,
+    "precision": 0.381,
+    "det_per_km2": 22.042
+   },
+   "0.15": {
+    "recall": 0.969,
+    "precision": 0.396,
+    "det_per_km2": 21.172
+   },
+   "0.2": {
+    "recall": 0.969,
+    "precision": 0.415,
+    "det_per_km2": 20.218
+   },
+   "0.25": {
+    "recall": 0.969,
+    "precision": 0.429,
+    "det_per_km2": 19.548
+   },
+   "0.3": {
+    "recall": 0.967,
+    "precision": 0.441,
+    "det_per_km2": 18.962
+   },
+   "0.35": {
+    "recall": 0.967,
+    "precision": 0.452,
+    "det_per_km2": 18.51
+   },
+   "0.4": {
+    "recall": 0.967,
+    "precision": 0.462,
+    "det_per_km2": 18.109
+   },
+   "0.45": {
+    "recall": 0.967,
+    "precision": 0.469,
+    "det_per_km2": 17.824
+   },
+   "0.5": {
+    "recall": 0.963,
+    "precision": 0.478,
+    "det_per_km2": 17.439
+   },
+   "0.55": {
+    "recall": 0.963,
+    "precision": 0.487,
+    "det_per_km2": 17.121
+   },
+   "0.6": {
+    "recall": 0.963,
+    "precision": 0.495,
+    "det_per_km2": 16.854
+   },
+   "0.65": {
+    "recall": 0.963,
+    "precision": 0.503,
+    "det_per_km2": 16.569
+   },
+   "0.7": {
+    "recall": 0.963,
+    "precision": 0.514,
+    "det_per_km2": 16.201
+   },
+   "0.75": {
+    "recall": 0.963,
+    "precision": 0.523,
+    "det_per_km2": 15.95
+   },
+   "0.8": {
+    "recall": 0.963,
+    "precision": 0.536,
+    "det_per_km2": 15.548
+   },
+   "0.85": {
+    "recall": 0.961,
+    "precision": 0.553,
+    "det_per_km2": 15.029
+   },
+   "0.9": {
+    "recall": 0.959,
+    "precision": 0.577,
+    "det_per_km2": 14.393
+   },
+   "0.95": {
+    "recall": 0.948,
+    "precision": 0.598,
+    "det_per_km2": 13.707
+   }
+  },
+  "mean_gbm_cnn": {
+   "0.05": {
+    "recall": 0.971,
+    "precision": 0.058,
+    "det_per_km2": 145.389
+   },
+   "0.1": {
+    "recall": 0.971,
+    "precision": 0.087,
+    "det_per_km2": 96.151
+   },
+   "0.15": {
+    "recall": 0.971,
+    "precision": 0.111,
+    "det_per_km2": 75.464
+   },
+   "0.2": {
+    "recall": 0.969,
+    "precision": 0.134,
+    "det_per_km2": 62.36
+   },
+   "0.25": {
+    "recall": 0.969,
+    "precision": 0.159,
+    "det_per_km2": 52.787
+   },
+   "0.3": {
+    "recall": 0.969,
+    "precision": 0.187,
+    "det_per_km2": 44.787
+   },
+   "0.35": {
+    "recall": 0.969,
+    "precision": 0.223,
+    "det_per_km2": 37.59
+   },
+   "0.4": {
+    "recall": 0.969,
+    "precision": 0.279,
+    "det_per_km2": 30.042
+   },
+   "0.45": {
+    "recall": 0.965,
+    "precision": 0.361,
+    "det_per_km2": 23.146
+   },
+   "0.5": {
+    "recall": 0.953,
+    "precision": 0.512,
+    "det_per_km2": 16.067
+   },
+   "0.55": {
+    "recall": 0.886,
+    "precision": 0.529,
+    "det_per_km2": 14.46
+   },
+   "0.6": {
+    "recall": 0.862,
+    "precision": 0.556,
+    "det_per_km2": 13.389
+   },
+   "0.65": {
+    "recall": 0.829,
+    "precision": 0.574,
+    "det_per_km2": 12.469
+   },
+   "0.7": {
+    "recall": 0.81,
+    "precision": 0.591,
+    "det_per_km2": 11.833
+   },
+   "0.75": {
+    "recall": 0.781,
+    "precision": 0.601,
+    "det_per_km2": 11.23
+   },
+   "0.8": {
+    "recall": 0.75,
+    "precision": 0.612,
+    "det_per_km2": 10.577
+   },
+   "0.85": {
+    "recall": 0.717,
+    "precision": 0.625,
+    "det_per_km2": 9.908
+   },
+   "0.9": {
+    "recall": 0.678,
+    "precision": 0.648,
+    "det_per_km2": 9.038
+   },
+   "0.95": {
+    "recall": 0.605,
+    "precision": 0.703,
+    "det_per_km2": 7.431
+   }
+  }
+ },
+ "recall_windows": {
+  "cnn": {
+   "0.5": 0.971,
+   "0.7": 0.962,
+   "0.9": 0.94,
+   "0.95": 0.931
+  },
+  "gbm_phase1": {
+   "0.5": 0.809,
+   "0.7": 0.75,
+   "0.9": 0.582,
+   "0.95": 0.42
+  },
+  "mean_gbm_cnn": {
+   "0.5": 0.966,
+   "0.7": 0.828,
+   "0.9": 0.683,
+   "0.95": 0.575
+  }
+ },
+ "density_test_windows": {
+  "cnn|aml|0.5": 1.39,
+  "cnn|aml|0.7": 1.39,
+  "cnn|aml|0.9": 0.69,
+  "cnn|aml|0.95": 0.0,
+  "cnn|bg|0.5": 1.39,
+  "cnn|bg|0.7": 0.69,
+  "cnn|bg|0.9": 0.0,
+  "cnn|bg|0.95": 0.0,
+  "gbm_phase1|aml|0.5": 30.21,
+  "gbm_phase1|aml|0.7": 14.93,
+  "gbm_phase1|aml|0.9": 3.47,
+  "gbm_phase1|aml|0.95": 1.39,
+  "gbm_phase1|bg|0.5": 20.14,
+  "gbm_phase1|bg|0.7": 9.72,
+  "gbm_phase1|bg|0.9": 4.17,
+  "gbm_phase1|bg|0.95": 1.39,
+  "mean_gbm_cnn|aml|0.5": 0.69,
+  "mean_gbm_cnn|aml|0.7": 0.69,
+  "mean_gbm_cnn|aml|0.9": 0.0,
+  "mean_gbm_cnn|aml|0.95": 0.0,
+  "mean_gbm_cnn|bg|0.5": 1.39,
+  "mean_gbm_cnn|bg|0.7": 0.69,
+  "mean_gbm_cnn|bg|0.9": 0.0,
+  "mean_gbm_cnn|bg|0.95": 0.0
+ }
+}

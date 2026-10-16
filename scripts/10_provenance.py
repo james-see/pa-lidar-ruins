@@ -12,8 +12,6 @@ with ThreadPoolExecutor(8) as ex:
     t = list(ex.map(lambda r: dem.has_1m(r[1], r[0]), zip(w.lat, w.lon, strict=True)))
 w["usgs_1m_products"] = [" | ".join(x) for x in t]
 w["has_1m"] = [bool(x) and x != ["<lookup failed>"] for x in t]
-w[["win", "kind", "cls", "has_1m", "usgs_1m_products"]].to_csv(
-    ROOT / "results" / "dem_provenance.csv", index=False
-)
+w[["win", "kind", "cls", "has_1m", "usgs_1m_products"]].to_csv(ROOT / "results" / "dem_provenance.csv", index=False)
 print(w.groupby("kind").has_1m.agg(["sum", "count"]))
 print(w[~w.has_1m][["win", "usgs_1m_products"]].to_string())

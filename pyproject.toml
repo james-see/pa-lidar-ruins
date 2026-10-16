@@ -19,6 +19,7 @@ dependencies = [
     "scikit-learn>=1.9.1",
     "scipy>=1.18.1",
     "shapely>=2.2.0",
+    "torch>=2.14.1",
 ]
 
 [build-system]
@@ -29,7 +30,7 @@ build-backend = "uv_build"
 module-name = "palidar"
 
 [tool.ruff]
-line-length = 110
+line-length = 120
 target-version = "py312"
 
 [tool.ruff.lint]

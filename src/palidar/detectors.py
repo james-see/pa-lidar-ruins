@@ -221,31 +221,47 @@ def berm_ditch_maps(z, res=1.0, sigmas=(1.5, 3.0), lrm_radius=12, ridge_thr=0.01
     return dict(lrm=l, ridge=ridge, valley=valley, pair=pair, orient=orient)
 
 
-def tile_scores(z, res=1.0, tile=100, maps=None, **kw):
-    """Per-tile linear-earthwork score. Returns DataFrame (tile_r, tile_c, density, odiv, score)."""
+def tile_scores(z, res=1.0, tile=100, maps=None, allowed=None, **kw):
+    """Per-tile linear-earthwork score + descriptive features.
+
+    Returns DataFrame (tile_r, tile_c, density, odiv, rough, ridge, valley, amp95, parallel,
+    allowed, score). `allowed` (bool raster) removes masked pixels (roads, water, mines...).
+    """
     m = maps or berm_ditch_maps(z, res, **kw)
-    pair, orient = m["pair"], m["orient"]
+    pair, orient, ridge, valley, lr = m["pair"], m["orient"], m["ridge"], m["valley"], m["lrm"]
+    if allowed is not None:
+        pair = pair & allowed
     H, W = pair.shape
     rows = []
     for i in range(0, H - tile + 1, tile):
         for j in range(0, W - tile + 1, tile):
-            p = pair[i : i + tile, j : j + tile]
+            sl = (slice(i, i + tile), slice(j, j + tile))
+            p = pair[sl]
             dens = p.mean()
             if p.sum() < 30:
-                odiv = 0.0
+                odiv, par = 0.0, 0.0
             else:
-                th = orient[i : i + tile, j : j + tile][p]
-                # orientation diversity: 1 - |mean resultant of doubled angles|
-                odiv = 1 - np.abs(np.mean(np.exp(2j * th)))
-            nz = m["lrm"][i : i + tile, j : j + tile]
-            rough = float(np.nanstd(nz))
+                th = orient[sl][p]
+                r = np.mean(np.exp(2j * th))
+                odiv = 1 - np.abs(r)
+                # fraction of pair pixels within 15 deg of the dominant orientation (strip-mine
+                # spoil ridges and roads are strongly parallel; fort walls turn corners)
+                dom = 0.5 * np.angle(r)
+                dd = np.abs((th - dom + np.pi / 2) % np.pi - np.pi / 2)
+                par = float((dd < np.radians(15)).mean())
+            nz = lr[sl]
             rows.append(
                 dict(
                     tile_r=i // tile,
                     tile_c=j // tile,
                     density=dens,
                     odiv=odiv,
-                    rough=rough,
+                    rough=float(np.nanstd(nz)),
+                    ridge=float(ridge[sl].mean()),
+                    valley=float(valley[sl].mean()),
+                    amp95=float(np.nanpercentile(np.abs(nz), 95)),
+                    parallel=par,
+                    allowed=1.0 if allowed is None else float(allowed[sl].mean()),
                     score=dens * (0.3 + odiv),
                 )
             )
